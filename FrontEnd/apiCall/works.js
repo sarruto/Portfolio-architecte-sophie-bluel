@@ -1,62 +1,37 @@
 // Faire appel à l'api
-fetch("http://localhost:5678/api/works")
-  // Recuperer une promesse en réponse
-  .then((response) => response.json())
-  .then((data) => {
-    // Créer la gallerie HTML
+  const response = await fetch("http://localhost:5678/api/works");
+  const works = await response.json();
+  
+  function displayWorks(works){
+    const gallery = document.querySelector(".gallery");
 
-    const gallerieContainers = document.querySelectorAll(".gallery");
-    // Récupérer les boutons de filtre du DOM
-    const filtreBoutons = document.querySelectorAll(".filtre-btn");
+    works.forEach(work => { 
+      const image = document.createElement("img");
+      image.src = work.imageUrl;
+      image.alt = work.title;
 
-    //Filtrage de la galerie
-    const filtreGalerie = (category) => {
-      gallerieContainers.forEach((gallerieContainer) => {
-        // Supprimer le contenu existant du conteneur de galerie
-        gallerieContainer.innerHTML = "";
+      let figCaption = document.createElement("figcaption");
+      figCaption.textContent= work.title;
 
-        // Chercher la categorie sélectioné
-        data.forEach((travaux) => {
-          // Vérifier si la catégorie correspond à la catégorie sélectioné
-          if (category === "" || travaux.category.name === category) {
-            // Créer un nouvel élément de galerie
-            const gallerieTravaux = document.createElement("div");
-            gallerieTravaux.className = "gallerie-travaux";
+      let figure = document.createElement("figure");
 
-            // Créer l'image
-            const image = document.createElement("img");
-            image.src = travaux.imageUrl;
-            image.alt = travaux.titre;
-            gallerieTravaux.appendChild(image);
-
-            // Créer le titre
-            const titre = document.createElement("h3");
-            titre.textContent = travaux.title;
-            gallerieTravaux.appendChild(titre);
-
-            // Ajouter l'élément à la galerie dans le DOM
-            gallerieContainer.appendChild(gallerieTravaux);
-          }
-        });
-      });
-    };
-
-    // Ajouter un gestionnaire d'événement de clic à chaque bouton de filtre
-    filtreBoutons.forEach((button) => {
-      button.addEventListener("click", () => {
-        // Récupérer la catégorie sélectionnée à partir de l'attribut personnalisé "data-category"
-        const selectedCategory = button.getAttribute("filtre-categorie");
-        // Filtrer la galerie en fonction de la catégorie sélectionnée
-        filtreGalerie(selectedCategory);
-      });
-    });
-
-    // Afficher tous les éléments de la galerie
-    filtreGalerie("");
-
-    // Pour gérer les erreurs
+      figure.appendChild(image);
+      figure.appendChild(figCaption);
+      gallery.appendChild(figure);
   })
-  .catch((error) => {
-    console.error("Une erreur s'est produite:", error);
-  });
-e
+}
+
+  displayWorks(works);
+
+  const resCat = await fetch("http://localhost:5678/api/categories");
+  const categories = await resCat.json();
+  console.log (categories)
+
+  function displayButtons(categories){
+    const buttonBox= document.createElement("div");
+    categories.forEach  (category => {
+    
+
+    })
+  }
+
