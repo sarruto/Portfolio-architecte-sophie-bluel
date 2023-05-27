@@ -1,37 +1,61 @@
 // Faire appel à l'api
-  const response = await fetch("http://localhost:5678/api/works");
-  const works = await response.json();
-  
-  function displayWorks(works){
-    const gallery = document.querySelector(".gallery");
+const response = await fetch("http://localhost:5678/api/works");
+const works = await response.json();
 
-    works.forEach(work => { 
-      const image = document.createElement("img");
-      image.src = work.imageUrl;
-      image.alt = work.title;
+function displayWorks(works){
+  const gallery = document.querySelector(".gallery");
 
-      let figCaption = document.createElement("figcaption");
-      figCaption.textContent= work.title;
+  works.forEach(work => { 
+    const image = document.createElement("img");
+    image.src = work.imageUrl;
+    image.alt = work.title;
 
-      let figure = document.createElement("figure");
+    let figCaption = document.createElement("figcaption");
+    figCaption.textContent= work.title;
 
-      figure.appendChild(image);
-      figure.appendChild(figCaption);
-      gallery.appendChild(figure);
-  })
+    let figure = document.createElement("figure");
+
+    figure.appendChild(image);
+    figure.appendChild(figCaption);
+    gallery.appendChild(figure);
+})
 }
 
-  displayWorks(works);
+displayWorks(works);
 
-  const resCat = await fetch("http://localhost:5678/api/categories");
-  const categories = await resCat.json();
-  console.log (categories)
+const resCat = await fetch("http://localhost:5678/api/categories");
+const categories = await resCat.json();
+console.log (categories)
 
-  function displayButtons(categories){
-    const buttonBox= document.createElement("div");
-    categories.forEach  (category => {
+
+
+function displayButtons(categories){
+  const buttonBox= document.createElement("div");
+  categories.forEach  (category => {
+  
+    const buttonFilter= document.querySelector(".buttonBox");
     
+    buttonFilter.addEventListener("click", function (){
+        
 
+
+
+    });
+      afficheworks(categories);
+
+      buttonBox.appendChild(figure);
     })
+
   }
+  const buttonFilter= document.querySelector(".buttonBox");
+    
+  buttonFilter.addEventListener("click", function (){
+      
+
+
+
+  });
+    afficheworks(categories);
+
+    buttonBox.appendChild(figure);
 
