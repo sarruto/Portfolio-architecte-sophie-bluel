@@ -23,39 +23,22 @@ function displayWorks(works){
 
 displayWorks(works);
 
+
+//Création boutton
+
 const resCat = await fetch("http://localhost:5678/api/categories");
 const categories = await resCat.json();
-console.log (categories)
 
+function displayBtn(categories){
+  const filterCategories = document.querySelector(".buttonBox");
 
+  categories.forEach(categorie => { 
+    const buttonCat = document.createElement('button');
+    buttonCat.innerText = categorie.name;
+    console.log(categorie.name);
 
-function displayButtons(categories){
-  const buttonBox= document.createElement("div");
-  categories.forEach  (category => {
-  
-    const buttonFilter= document.querySelector(".buttonBox");
-    
-    buttonFilter.addEventListener("click", function (){
-        
+    filterCategories.appendChild(buttonCat);
+})
+}
 
-
-
-    });
-      afficheworks(categories);
-
-      buttonBox.appendChild(figure);
-    })
-
-  }
-  const buttonFilter= document.querySelector(".buttonBox");
-    
-  buttonFilter.addEventListener("click", function (){
-      
-
-
-
-  });
-    afficheworks(categories);
-
-    buttonBox.appendChild(figure);
-
+displayBtn(categories);
