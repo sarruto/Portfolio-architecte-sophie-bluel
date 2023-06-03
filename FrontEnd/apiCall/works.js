@@ -37,13 +37,15 @@ function displayBtn(categories, works) {
   
   const allButton = document.createElement('button');
   
-  allButton.innerText = 'Tout afficher';
+  allButton.innerText = 'Tous';
   buttonBoxContainer.appendChild(allButton);
 
   allButton.addEventListener('click', () => {
     displayWorks(works);
+  
   });
 
+  allButton.classList.add("button");
   categories.forEach(category => {
     const buttonCat = document.createElement('button');
     buttonCat.innerText = category.name;
@@ -52,9 +54,20 @@ function displayBtn(categories, works) {
     buttonCat.addEventListener('click', () => {
       const filteredWorks = works.filter(work => work.categoryId === category.id);
       displayWorks(filteredWorks);
+      
     });
   });
 }
 
 displayWorks(works);
 displayBtn(categories, works);
+/*
+const buttonBox = document.querySelector(".buttonBox");
+buttonBox.classList.add("hidden");
+
+
+
+buttonBox.classList.remove("hidden");
+
+buttonBox.classList.toggle("hidden");
+*/
