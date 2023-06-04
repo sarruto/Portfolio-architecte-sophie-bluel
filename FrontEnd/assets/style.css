@@ -217,7 +217,11 @@ border-radius: 60px;
 background: #E5E5E5;
 text-decoration: #1D6154;
 }
+button:hover{
+background:#1D6154; 
+color: #FFFFFF;
 
+}
 .gallery {
   width: 100%;
   display: grid;
