@@ -199,29 +199,30 @@ li:hover {
 
 #introduction p {
   margin-bottom: 0.5em;
+  text-align: justify;
 }
 #portfolio h2 {
   text-align: center;
   margin-bottom: 1em;
 }
 button {
-color: #1d6154;
-height: 19px;
-size: 16px;
-margin-bottom: 51px;
-margin-right: 10px;
-text-align: center;
-box-sizing: border-box;
-border: 1px solid #1d6154 ;
-border-radius: 60px;
-background: #E5E5E5;
-text-decoration: #1D6154;
-}
-button:hover{
-background:#1D6154; 
-color: #FFFFFF;
-
-}
+  color: #1d6154;
+  height: 19px;
+  size: 16px;
+  margin-bottom: 51px ;
+  margin-right: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid #1d6154 ;
+  border-radius: 60px;
+  background: #E5E5E5;
+  text-decoration: #1D6154;
+  }
+  button:hover{
+  background:#1D6154; 
+  color: #FFFFFF;
+  
+  }
 .gallery {
   width: 100%;
   display: grid;
@@ -285,4 +286,11 @@ footer nav ul {
 .hidden{
   display: none;  
 
+}
+
+
+.error-message {
+  display: none;
+  color: red;
+  font-weight: bold;
 }
