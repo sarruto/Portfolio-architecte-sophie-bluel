@@ -19,23 +19,24 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
       .then(response => {
         if (response.ok) {
           console.log('Login réussi');
-          // Actions à effectuer après le login réussi
+         
   
-          // Récupérer la réponse JSON
+         
           return response.json();
         } else {
           console.log('Échec de la connexion');
-          // Actions à effectuer après l'échec du login
+         
           document.getElementById('error-message').style.display = 'block';
           throw new Error('Erreur dans l\'identifiant ou le mot de passe');
         }
       })
       .then(data => {
         // Stocker la réponse du login dans le localStorage
-        localStorage.setItem('loginResponse', JSON.stringify(data));
-        
-        // Rediriger vers la page du site avec les boutons d'actions
-        window.location.href = "https://exemple.com/page-du-site";
+       sessionStorage.setItem('token', data.token);
+       
+       //sessionStorage.setItem('loginResponse', JSON.stringify(data));
+        // Rediriger vers la page du site 
+        window.location.href = "index.html";
       })
       .catch(error => {
         console.log('Erreur lors de la requête de login', error);

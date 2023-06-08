@@ -34,27 +34,42 @@ const categories = await categoriesResponse.json();
 
 function displayBtn(categories, works) {
   const buttonBoxContainer = document.querySelector(".buttonBox");
-  
+  categories.unshift({ id: 0, name: "Tous"});
+  /*
   const allButton = document.createElement('button');
   
+  allButton.classList.add("active");
   allButton.innerText = 'Tous';
   buttonBoxContainer.appendChild(allButton);
 
   allButton.addEventListener('click', () => {
     displayWorks(works);
+    document.querySelector(".active").classList.remove("active");
+    allButton.classList.add("active");
   
   });
 
   allButton.classList.add("button");
+  */
   categories.forEach(category => {
     const buttonCat = document.createElement('button');
+  
     buttonCat.innerText = category.name;
     buttonBoxContainer.appendChild(buttonCat);
+    if (category.id === 0) {
+      buttonCat.classList.add("active");
+  
+    }
 
     buttonCat.addEventListener('click', () => {
-      const filteredWorks = works.filter(work => work.categoryId === category.id);
-      displayWorks(filteredWorks);
+      let filteredWorks = works; 
+      if (category.id !== 0){
+        filteredWorks = works.filter(work => work.categoryId === category.id);
+      }
       
+      displayWorks(filteredWorks);
+      document.querySelector(".active").classList.remove("active");
+      buttonCat.classList.add("active");
     });
   });
 }
