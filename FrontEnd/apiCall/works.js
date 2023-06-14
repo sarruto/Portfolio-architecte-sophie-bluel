@@ -76,7 +76,7 @@ function displayBtn(categories, works) {
 
 displayWorks(works);
 displayBtn(categories, works);
-/*
+
 const buttonBox = document.querySelector(".buttonBox");
 buttonBox.classList.add("hidden");
 
@@ -85,4 +85,3 @@ buttonBox.classList.add("hidden");
 buttonBox.classList.remove("hidden");
 
 buttonBox.classList.toggle("hidden");
-*/
