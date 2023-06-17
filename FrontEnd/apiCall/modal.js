@@ -1,21 +1,24 @@
 // Fonction pour ouvrir la modale
 function openModal() {
-    const modal = document.getElementById('myModal');
-    modal.style.display = 'block';
+    const modal = document.querySelector('.modal');
+   // modal.style.display = 'flex';
+    modal.classList.remove("hidden");
   }
   
   // Fonction pour fermer la modale
   function closeModal() {
-    const modal = document.getElementById('myModal');
-    modal.style.display = 'none';
+    const modal = document.querySelector('.modal');
+    modal.classList.add("hidden");
+   
+    //modal.style.display = 'none';
   }
   
-  // Événement au clic sur le bouton "Ouvrir la modale"
-  const openModalButton = document.getElementById('openModalButton');
+  // Ouvrir la modale au clic
+  const openModalButton = document.getElementById('openModalBtn');
   openModalButton.addEventListener('click', openModal);
   
-  // Événement au clic sur le bouton "Fermer"
-  const closeButton = document.getElementById('closeButton');
+  // Fermer la modale au clic 
+  const closeButton = document.querySelector('.closeModal');
   closeButton.addEventListener('click', closeModal);
   
   // Appel à l'API pour récupérer les travaux
@@ -43,5 +46,5 @@ function openModal() {
   }
   
   // Appel initial pour récupérer les travaux et les afficher
-  fetchWorks();
+  //fetchWorks();
   

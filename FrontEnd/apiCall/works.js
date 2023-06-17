@@ -35,22 +35,7 @@ const categories = await categoriesResponse.json();
 function displayBtn(categories, works) {
   const buttonBoxContainer = document.querySelector(".buttonBox");
   categories.unshift({ id: 0, name: "Tous"});
-  /*
-  const allButton = document.createElement('button');
   
-  allButton.classList.add("active");
-  allButton.innerText = 'Tous';
-  buttonBoxContainer.appendChild(allButton);
-
-  allButton.addEventListener('click', () => {
-    displayWorks(works);
-    document.querySelector(".active").classList.remove("active");
-    allButton.classList.add("active");
-  
-  });
-
-  allButton.classList.add("button");
-  */
   categories.forEach(category => {
     const buttonCat = document.createElement('button');
   
@@ -75,8 +60,16 @@ function displayBtn(categories, works) {
 }
 
 displayWorks(works);
-displayBtn(categories, works);
+const token = sessionStorage.getItem("token");
+if (token){
+  const openModalBtn = document.querySelector("#openModalBtn");
+  openModalBtn.classList.remove("hidden");
+}else{
+  displayBtn(categories, works);
+}
 
+
+/*
 const buttonBox = document.querySelector(".buttonBox");
 buttonBox.classList.add("hidden");
 
@@ -85,3 +78,4 @@ buttonBox.classList.add("hidden");
 buttonBox.classList.remove("hidden");
 
 buttonBox.classList.toggle("hidden");
+*/

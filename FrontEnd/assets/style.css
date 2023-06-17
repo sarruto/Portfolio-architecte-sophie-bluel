@@ -307,11 +307,12 @@ footer nav ul {
   margin: 2em;
 }
 
-.hidden{
+/*.hidden{
+
   display: none;  
 
 }
-
+*/
 
 .error-message {
   display: none;

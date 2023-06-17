@@ -10,17 +10,21 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="./assets/modal.css">
 </head>
 <body>
 <header>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
+
 		<ul>
-			<li>projets</li>
-			<li>contact</li>
-			<li>login</li>
+			
+			<li><a href="#portfolio">projets</a></li>
+			<li><a href="#contact">contact</a></li>
+			<li><a href = "login.html">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
+		
 	</nav>
 </header>
 <main>
@@ -37,9 +41,18 @@
 	</section>
 	<section id="portfolio">
 		<h2>Mes Projets</h2>
-
+		<button id="openModalBtn" class="hidden">Ouvrir la modale</button>
+		<aside class="modal hidden" >
+			<div class="modalContent">
+				<button class="closeModal">
+					fermer
+				</button>
+				
+			</div>
+		
+		</aside>
 		<div class="buttonBox">
-			<button id="openModalBtn">Ouvrir la modale</button>
+			
 		</div>
 		
 		<div class="gallery"></div>
@@ -70,7 +83,9 @@
 
 <script src="apiCall/works.js" type="module"></script>
 <script src="apiCall/modal.js" type="module"></script>
+
 </body>
 </html>
+
 
 	
