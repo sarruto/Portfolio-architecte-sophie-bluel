@@ -19,29 +19,28 @@ html {
   }
 
   .modalContent{
-    width: 600px;
-    height: 800px;
+    width: 630px;
+    height: 731px;
     background-color: white;
 
 
   }
 
 
+.closeModal{
+  display: flex;
+  justify-content: right;
+  text-decoration: none;
+}
+
+.galleriePhoto figure{
+  width: 78,12px;
+  height: 104,08px ;
+
+  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+} 
 
   
   .hidden{

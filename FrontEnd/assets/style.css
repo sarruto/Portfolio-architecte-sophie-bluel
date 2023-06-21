@@ -234,17 +234,17 @@ button {
   color: #FFFFFF;
   
   }
-.gallery {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-}
-
-.gallery img {
-  width: 100%;
-}
+  .gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  
+  .gallery img {
+    width: 100%;
+  }
 
 #contact,#log-in{
   width: 50%;
@@ -307,6 +307,14 @@ footer nav ul {
   margin: 2em;
 }
 
+
+
+
+
+.hidden{
+  display: none;  
+
+}
 /*.hidden{
 
   display: none;  
@@ -319,3 +327,4 @@ footer nav ul {
   color: red;
   font-weight: bold;
 }
+
