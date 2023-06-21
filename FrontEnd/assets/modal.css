@@ -19,6 +19,7 @@ html {
 }
 
 .modalContent{
+  position: relative;
   width: 630px;
   height: 731px;
   border-radius: 10px;
@@ -28,13 +29,17 @@ html {
 }
 
 
-.closeModal {
-display: flex;
-justify-content: right;
-align-items: right;
-text-decoration: none;
+.fa-solid fa-xmark closeModal{
+position: absolute;
+width: 12%;
+height: 12%;
+right: 24.98%;
+top: 24.98%;
+padding: 32px 36px 0px 0px;
+
 }
 
+  
 
 #galleryModal h2{
 font-family: 'Work Sans';
@@ -47,11 +52,35 @@ color: black;
 }
 
 
-#galleryPicture img {
+#galleryModal img {
   width:30%;
 
 }
 
+input[value="Ajouter une photo"] {
+background: #1D6154;
+border-radius: 60px; 
+width: 237px;
+height: 36px;
+font-family: 'Syne';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+text-align: center;
+color: #FFFFFF;
+
+}
+
+
+.supprimer{
+font-family: 'Syne';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+text-align: center;
+color: #D65353;
+}
 
 
 .hidden{
