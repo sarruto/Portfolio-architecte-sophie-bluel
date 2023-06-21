@@ -1,49 +1,60 @@
 html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
-  .modal{
-    position: fixed;
-    left:0;
-    top: 0;
-    width: 100%;
-    height: 100% ;
-    background-color: rgba(0, 0,0,0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-  }
-
-  .modalContent{
-    width: 630px;
-    height: 731px;
-    background-color: white;
-
-
-  }
-
-
-.closeModal{
-  display: flex;
-  justify-content: right;
-  text-decoration: none;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-.galleriePhoto figure{
-  width: 78,12px;
-  height: 104,08px ;
+.modal{
+  position: fixed;
+  left:0;
+  top: 0;
+  width: 100%;
+  height: 100% ;
+  background-color: rgba(0, 0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  
+}
+
+.modalContent{
+  width: 630px;
+  height: 731px;
+  border-radius: 10px;
+  background-color: white;
 
 
-} 
+}
 
-  
-  .hidden{
+
+.closeModal {
+display: flex;
+justify-content: right;
+align-items: right;
+text-decoration: none;
+}
+
+
+#galleryModal h2{
+font-family: 'Work Sans';
+width: 173px;
+height: 30px;
+font-size: 26px;
+text-align: center;
+color: black;
+
+}
+
+
+#galleryPicture img {
+  width:30%;
+
+}
+
+
+
+.hidden{
     display: none;  
   
   }

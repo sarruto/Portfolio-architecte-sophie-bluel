@@ -290,6 +290,7 @@ input[type="submit"] {
   border-radius: 60px;
 }
 
+
 .motDePasse{
 width: 139px;
 height: 16px;
@@ -307,6 +308,12 @@ footer nav ul {
   margin: 2em;
 }
 
+
+
+.hidden{
+  display: none;  
+
+}
 
 
 

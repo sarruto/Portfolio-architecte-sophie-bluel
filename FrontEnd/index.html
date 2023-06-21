@@ -10,8 +10,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 
-	<link rel="stylesheet" href="./assets/modal.css">
+	
 	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="./assets/modal.css">
+
 	<!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -50,64 +52,76 @@
 				<button class="closeModal">
 					<i class="fa-sharp fa-regular fa-xmark"></i>
 				</button>
-			<section class="galleriePhoto">
+
+
+			<section id="galleryModal">
 				<h2>Galerie photo</h2>
+
+				<div id="galleryPicture"></div>
 				
-					<figure>
-						<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina">
-						<figcaption>Abajour Tahina</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/images/appartement-paris-v.png" alt="Appartement Paris V">
-						<figcaption>Appartement Paris V</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/images/restaurant-sushisen-londres.png" alt="Restaurant Sushisen - Londres">
-						<figcaption>Restaurant Sushisen - Londres</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/images/la-balisiere.png" alt="Villa “La Balisiere” - Port Louis">
-						<figcaption>Villa “La Balisiere” - Port Louis</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/images/structures-thermopolis.png" alt="Structures Thermopolis">
-						<figcaption>Structures Thermopolis</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/images/appartement-paris-x.png" alt="Appartement Paris X">
-						<figcaption>Appartement Paris X</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/images/le-coteau-cassis.png" alt="Pavillon “Le coteau” - Cassis">
-						<figcaption>Pavillon “Le coteau” - Cassis</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/images/villa-ferneze.png" alt="Villa Ferneze - Isola d’Elba">
-						<figcaption>Villa Ferneze - Isola d’Elba</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/images/appartement-paris-xviii.png" alt="Appartement Paris XVIII">
-						<figcaption>Appartement Paris XVIII</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/images/bar-lullaby-paris.png" alt="Bar “Lullaby” - Paris">
-						<figcaption>Bar “Lullaby” - Paris</figcaption>
-					</figure>
-					<figure>
-						<img src="assets/images/hotel-first-arte-new-delhi.png" alt="Hotel First Arte - New Delhi">
-						<figcaption>Hotel First Arte - New Delhi</figcaption>
-					</figure>
-				
-				
-				<form action="#" method="post" id="login-form">
-					
-					<input type="submit" value="Se connecter">
-				</form>
+				<figure>
+					<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina">
+					<figcaption>éditer</figcaption>
+					<i class="fa-solid fa-trash-can"></i>
+				</figure>
+				<figure>
+					<img src="assets/images/appartement-paris-v.png" alt="Appartement Paris V">
+					<figcaption>éditer</figcaption>
+					<i class="fa-solid fa-trash-can"></i>
+				</figure>
+				<figure>
+					<img src="assets/images/restaurant-sushisen-londres.png" alt="Restaurant Sushisen - Londres">
+					<figcaption>éditer</figcaption>
+					<i class="fa-solid fa-trash-can"></i>
+				</figure>
+				<figure>
+					<img src="assets/images/la-balisiere.png" alt="Villa “La Balisiere” - Port Louis">
+					<figcaption>éditer</figcaption>
+					<i class="fa-solid fa-trash-can"></i>
+				</figure>
+				<figure>
+					<img src="assets/images/structures-thermopolis.png" alt="Structures Thermopolis">
+					<figcaption>éditer</figcaption>
+					<i class="fa-solid fa-trash-can"></i>
+				</figure>
+				<figure>
+					<img src="assets/images/appartement-paris-x.png" alt="Appartement Paris X">
+					<figcaption>éditer</figcaption>
+					<i class="fa-solid fa-trash-can"></i>
+				</figure>
+				<figure>
+					<img src="assets/images/le-coteau-cassis.png" alt="Pavillon “Le coteau” - Cassis">
+					<figcaption>éditer</figcaption>
+					<i class="fa-solid fa-trash-can"></i>
+				</figure>
+				<figure>
+					<img src="assets/images/villa-ferneze.png" alt="Villa Ferneze - Isola d’Elba">
+					<figcaption>éditer</figcaption>
+					<i class="fa-solid fa-trash-can"></i>
+				</figure>
+				<figure>
+					<img src="assets/images/appartement-paris-xviii.png" alt="Appartement Paris XVIII">
+					<figcaption>éditer</figcaption>
+					<i class="fa-solid fa-trash-can"></i>
+				</figure>
+				<figure>
+					<img src="assets/images/bar-lullaby-paris.png" alt="Bar “Lullaby” - Paris">
+					<figcaption>éditer</figcaption>
+					<i class="fa-solid fa-trash-can"></i>
+				</figure>
+				<figure>
+					<img src="assets/images/hotel-first-arte-new-delhi.png" alt="Hotel First Arte - New Delhi">
+					<figcaption>éditer</figcaption>
+					<i class="fa-solid fa-trash-can"></i>
+				</figure>
 			
-				
-				
-				<a class ="motDePasse" href="#" > Mot de passe oublié </a>
-			</section>	
+			
+					
+					<input type="submit" value="Ajouter une photo">
+			
+					<a class ="supprimer" href="#" > Supprimer la galerie </a>
+			
+				</section>	
 			</div>
 		
 		</aside>
