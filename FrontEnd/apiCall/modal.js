@@ -1,61 +1,22 @@
 
-
-
-// Fonction pour ouvrir la modale
-function openModal() {
-    const modal = document.querySelector('.modal');
-   // modal.style.display = 'flex';
-    modal.classList.remove("hidden");
-  }
-  
-  // Fonction pour fermer la modale
-  function closeModal() {
-    const modal = document.querySelector('.modal');
-    modal.classList.add("hidden");
-   
-    //modal.style.display = 'none';
-  }
-  
-  // Ouvrir la modale au clic
-  const openModalButton = document.getElementById('openModalBtn');
-  openModalButton.addEventListener('click', openModal);
-  
-  // Fermer la modale au clic 
-  const closeButton = document.querySelector('.closeModal');
-  closeButton.addEventListener('click', closeModal);
-  
-  displayWorks(works);
-const token = sessionStorage.getItem("token");
-if (token){
-  const openModalBtn = document.querySelector("#openModalBtn");
-  openModalBtn.classList.remove("hidden");
-}else{
-  displayBtn(categories, works);
-}
-
-
-
-
-// Faire appel à l'API pour les works
-
-const worksResponse = await fetch("http://localhost:5678/api/works");
-const works = await worksResponse.json();
-
-// Fonction pour afficher les works
-
+// Fonction pour afficher les works dans la galerie
 function displayWorks(works) {
-  const gallery = document.querySelector("#galleryPicure");
-  gallery.innerHTML = ""; // Effacer le contenu précédent de la galerie
+  const gallery = document.querySelector('.gallery-modal');
+  gallery.innerHTML = ''; // Effacer le contenu précédent de la galerie
 
   works.forEach(work => {
-    const image = document.createElement("img");
+    const image = document.createElement('img');
     image.src = work.imageUrl;
     image.alt = work.title;
 
-    let figCaption = document.createElement("figcaption");
-    figCaption.textContent = work.title;
+    let editButton = document.createElement('button');
+    editButton.textContent = 'éditer';
+    editButton.classList.add('edit-button');
 
-    let figure = document.createElement("figure");
+    let figCaption = document.createElement('figcaption');
+    figCaption.appendChild(editButton);
+
+    let figure = document.createElement('figure');
 
     figure.appendChild(image);
     figure.appendChild(figCaption);
@@ -63,7 +24,42 @@ function displayWorks(works) {
   });
 }
 
+// Fonction pour récupérer les works depuis l'API
+async function fetchWorks() {
+  try {
+    const worksResponse = await fetch('http://localhost:5678/api/works');
+    const works = await worksResponse.json();
+    displayWorks(works);
+  } catch (error) {
+    console.log(error);
+  }
+}
 
+// Fonction pour ouvrir la modale et afficher la galerie des works
+function openModal() {
+  const modal = document.getElementById('modal');
+  modal.style.display = 'block';
+
+  fetchWorks(); // Appel de la fonction pour récupérer et afficher les works dans la modale
+}
+
+// Fonction pour fermer la modale
+function closeModal() {
+  const modal = document.getElementById('modal');
+  modal.style.display = 'none';
+}
+
+// Sélection du bouton d'ouverture de la modale
+const openModalBtn = document.getElementById('openModalBtn');
+
+// Sélection du bouton de fermeture de la modale
+const closeModalBtn = document.getElementById('closeModalBtn');
+
+// Écouteur d'événement pour le clic sur le bouton d'ouverture de la modale
+openModalBtn.addEventListener('click', openModal);
+
+// Écouteur d'événement pour le clic sur le bouton de fermeture de la modale
+closeModalBtn.addEventListener('click', closeModal);
 
 
 
@@ -98,4 +94,11 @@ buttonBox.classList.toggle("hidden");
   
   // Appel initial pour récupérer les travaux et les afficher
   //fetchWorks();
+  
+
+
+
+
+
+
   

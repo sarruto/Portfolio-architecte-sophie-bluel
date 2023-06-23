@@ -54,23 +54,36 @@
 					<i class="fa-solid fa-xmark closeModal"></i>
 				
 
+				</aside>
+			
+
 
 				<section id="galleryModal">
-				<h2>Galerie photo</h2>
+				
 
 				<div id="galleryPicture"></div>
 				
+				<!-- Modale -->
+<div id="modal" class="modal">
+	<div class="modal-content">
+	  <span id="closeModalBtn" class="close">&times;</span>
+	  <h2>Galerie photo</h2>
+	  <div class="gallery-modal"></div>
+	  <div class="button-container">
+		<button id="addPhotoBtn">Ajouter une photo</button>
+		<span id="deleteGalleryBtn" class="delete-button">Supprimer la galerie</span>
+	  </div>
+	</div>
+  </div>
 				
 			
 					
-					<input type="submit" value="Ajouter une photo"><br>
-			
-					<a class ="supprimer" href="#" > Supprimer la galerie </a>
-			
+					
+
 				</section>	
+			
 			</div>
 		
-		</aside>
 		<div class="buttonBox"></div>
 			
 		
@@ -99,6 +112,8 @@
 		</ul>
 	</nav>
 </footer>
+
+
 
 <script src="apiCall/works.js" type="module"></script>
 <script src="apiCall/modal.js" type="module"></script>
