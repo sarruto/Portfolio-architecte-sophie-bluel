@@ -1,101 +1,94 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-
-
-
 .blackBloc {
-	background-color: black;
-	width: 1440px;
-	height: 59px;
+  background-color: black;
+  width: 1440px;
+  height: 59px;
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
-
 }
-.buttonEdition{
-height: 19px;
-font-family: Work Sans;
-font-size: 16px;
-font-weight: 400;
-border: #000000;
-color: #FFFFFF;
-background: #000000;
-padding-top: 12px;
-
+.buttonEdition {
+  height: 19px;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  border: #000000;
+  color: #ffffff;
+  background: #000000;
+  padding-top: 12px;
 }
-.publier{
-width: 216px;
-height: 38px;
-font-family: Work Sans;
-font-size: 16px;
-font-weight: 400;
-line-height: 19px;
-letter-spacing: 0em;
-text-align: center;
-color: black;
-border-radius: 60px;
-
+.publier {
+  width: 216px;
+  height: 38px;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: black;
+  border-radius: 60px;
 }
 
-.buttonModifier{
+.buttonModifier {
   width: 58px;
   height: 16px;
   top: 601px;
   left: 272px;
   font-family: Work Sans;
-font-size: 14px;
-font-weight: 400;
-line-height: 16px;
-letter-spacing: 0em;
-text-align: center;
-color: #000000;
-border: none;
-display: flex;
-flex-direction: column-reverse;
-flex-wrap: wrap;
-padding-left: 58px;
-padding-top: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
+  border: none;
+  padding-left: 58px;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: baseline;
 }
 
-.buttonModifierPro{
+.buttonModifierPro {
   width: 58px;
   height: 16px;
   top: 601px;
   left: 272px;
   font-family: Work Sans;
-font-size: 14px;
-font-weight: 400;
-line-height: 16px;
-letter-spacing: 0em;
-text-align: center;
-color: #000000;
-border: none;
-display: flex;
-
-
-  
-
-
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
+  border: none;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: baseline;
 }
 
 .modal {
-	display: none; 
-	position: fixed;
-	
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.6); 
+  display: none;
+  position: fixed;
+
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
 }
-
-
 
 .modal-content {
   position: absolute;
@@ -104,13 +97,10 @@ display: flex;
   left: 405px;
   top: 660px;
   border-radius: 10px;
-	background: #FFFFFF;
-	
+  background: #ffffff;
 }
 
-
 .closeModal {
-
   height: 12.01px;
   width: 12.01px;
   left: 5.99px;
@@ -118,32 +108,30 @@ display: flex;
   color: #000000;
   float: right;
   padding: 36px 36px 0px 0px;
-	
 }
 
 .closeModal:hover,
 .closeModal:focus {
-	color: #000;
-	text-decoration: none;
-	cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
-.modal-content h2{
+.modal-content h2 {
   height: 30px;
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   font-size: 26px;
   font-weight: 400;
   line-height: 30px;
   text-align: center;
   color: #000000;
   padding: 60px 228px 42px 229px;
-
 }
 
 .gallery-modal {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 0px;
-  justify-items: stretch; 
+  justify-items: stretch;
   align-items: center;
   grid-auto-flow: dense;
   margin-top: 20px;
@@ -159,24 +147,23 @@ display: flex;
   width: 90%;
   height: 104px;
   object-fit: cover;
- 
 }
-#addPhotoBtn{
+#addPhotoBtn {
   width: 237px;
   height: 36px;
   border-radius: 60px;
   background: #1d6154;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.border{
-  border-bottom: 1px solid #B3B3B3;
+.border {
+  border-bottom: 1px solid #b3b3b3;
   width: 420px;
 }
 
 .edit-button {
   height: 17px;
-  font-family: 'Syne';
+  font-family: "Syne";
   font-weight: 700;
   background: transparent;
   border: none;
@@ -185,7 +172,6 @@ display: flex;
   font-family: inherit;
   color: inherit;
   cursor: pointer;
-
 }
 
 .button-container {
@@ -198,7 +184,7 @@ display: flex;
 .delete-button {
   width: 230px;
   height: 17px;
-  font-family: 'Syne';
+  font-family: "Syne";
   font-size: 14px;
   line-height: 17px;
   font-weight: 400;
@@ -207,12 +193,6 @@ display: flex;
   cursor: pointer;
 }
 
-
-
-
-
-.hidden{
-    display: none;  
-  
-  }
-  
+.hidden {
+  display: none;
+}
