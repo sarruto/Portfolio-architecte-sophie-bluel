@@ -292,15 +292,15 @@ input[type="submit"] {
 
 
 .motDePasse{
-width: 139px;
-height: 16px;
-font-family: Work Sans;
-font-weight: 500;
-font-size: 14px;
-text-decoration-line: underline;
-color: #3D3D3D;
-
-}
+  width: 139px;
+  height: 16px;
+  font-family: Work Sans;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration-line: underline;
+  color: #3D3D3D;
+  
+  }
 
 footer nav ul {
   display: flex;

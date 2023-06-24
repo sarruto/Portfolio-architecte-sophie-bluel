@@ -5,86 +5,11 @@ html {
   box-sizing: inherit;
 }
 
-.modal{
-  position: fixed;
-  left:0;
-  top: 0;
-  width: 100%;
-  height: 100% ;
-  background-color: rgba(0, 0,0,0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.modalContent{
-  position: relative;
-  width: 630px;
-  height: 731px;
-  border-radius: 10px;
-  background-color: white;
-
-
-}
-
-
-.fa-solid fa-xmark closeModal{
-position: absolute;
-width: 12%;
-height: 12%;
-right: 24.98%;
-top: 24.98%;
-padding: 32px 36px 0px 0px;
-
-}
-
-  
-
-#galleryModal h2{
-font-family: 'Work Sans';
-width: 173px;
-height: 30px;
-font-size: 26px;
-text-align: center;
-color: black;
-
-}
-
-
-#galleryModal img {
-  width:30%;
-
-}
-
-input[value="Ajouter une photo"] {
-background: #1D6154;
-border-radius: 60px; 
-width: 237px;
-height: 36px;
-font-family: 'Syne';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-text-align: center;
-color: #FFFFFF;
-
-}
-
-
-.supprimer{
-font-family: 'Syne';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 17px;
-text-align: center;
-color: #D65353;
-}
 
 
 
-/* Ajoute tes styles CSS personnalisés ici */
+
+
 
 /* Style de la modale */
 .modal {
@@ -99,41 +24,58 @@ color: #D65353;
 	background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
 }
 
-/* Contenu de la modale */
+
 .modal-content {
-  border-radius: 20px;
-	background-color: #fefefe;
-	margin: 10% auto;
-	padding: 20px;
-	border: 1px solid #888;
-	width: 40%;
+  position: absolute;
+  width: 630px;
+  height: 731px;
+  left: 405px;
+  top: 660px;
+  border-radius: 10px;
+	background: #FFFFFF;
+	
 }
 
-/* Bouton de fermeture de la modale */
-.close {
-	color: #aaa;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
-	cursor: pointer;
+
+.closeModal {
+
+  height: 12.01px;
+  width: 12.01px;
+  left: 5.99px;
+  top: 6px;
+  color: #000000;
+  float: right;
+  padding: 36px 36px 0px 0px;
+	
 }
 
-.close:hover,
-.close:focus {
+.closeModal:hover,
+.closeModal:focus {
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
 }
+.modal-content h2{
+  height: 30px;
+  font-family: 'Work Sans';
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+  padding: 60px 228px 42px 229px;
 
-/* Style de la galerie dans la modale */
+}
+
 .gallery-modal {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 0px;
-  justify-items: stretch; /* Modification de cette ligne */
+  justify-items: stretch; 
   align-items: center;
   grid-auto-flow: dense;
   margin-top: 20px;
+  padding: 0px 105px 0px 105px;
 }
 
 .gallery-modal figure {
@@ -142,24 +84,33 @@ color: #D65353;
 }
 
 .gallery-modal img {
-  width: 40%;
-  height: auto;
+  width: 90%;
+  height: 104px;
   object-fit: cover;
-  border-radius: 5px;
+ 
+}
+#addPhotoBtn{
+  width: 237px;
+  height: 36px;
+  border-radius: 60px;
+  background: #1d6154;
+  color: #FFFFFF;
 }
 
 
 
-
 .edit-button {
+  height: 17px;
+  font-family: 'Syne';
+  font-weight: 700;
   background: transparent;
   border: none;
-  padding: 0;
   margin: 0;
   font-size: inherit;
   font-family: inherit;
   color: inherit;
   cursor: pointer;
+
 }
 
 .button-container {
@@ -170,8 +121,14 @@ color: #D65353;
 }
 
 .delete-button {
+  width: 230px;
+  height: 17px;
+  font-family: 'Syne';
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
   margin-top: 10px;
-  color: red;
+  color: #d65353;
   cursor: pointer;
 }
 
