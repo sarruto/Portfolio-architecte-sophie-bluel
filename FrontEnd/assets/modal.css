@@ -8,21 +8,93 @@ html {
 
 
 
+.blackBloc {
+	background-color: black;
+	width: 1440px;
+	height: 59px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+}
+.buttonEdition{
+height: 19px;
+font-family: Work Sans;
+font-size: 16px;
+font-weight: 400;
+border: #000000;
+color: #FFFFFF;
+background: #000000;
+padding-top: 12px;
+
+}
+.publier{
+width: 216px;
+height: 38px;
+font-family: Work Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: center;
+color: black;
+border-radius: 60px;
+
+}
+
+.buttonModifier{
+  width: 58px;
+  height: 16px;
+  top: 601px;
+  left: 272px;
+  font-family: Work Sans;
+font-size: 14px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: center;
+color: #000000;
+border: none;
+display: flex;
+flex-direction: column-reverse;
+flex-wrap: wrap;
+padding-left: 58px;
+padding-top: 30px;
+}
+
+.buttonModifierPro{
+  width: 58px;
+  height: 16px;
+  top: 601px;
+  left: 272px;
+  font-family: Work Sans;
+font-size: 14px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: center;
+color: #000000;
+border: none;
+display: flex;
 
 
+  
 
-/* Style de la modale */
+
+}
+
 .modal {
-	display: none; /* Par défaut, la modale est cachée */
+	display: none; 
 	position: fixed;
-	z-index: 999;
+	
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 100%;
 	overflow: auto;
-	background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+	background-color: rgba(0, 0, 0, 0.6); 
 }
+
 
 
 .modal-content {
@@ -97,7 +169,10 @@ html {
   color: #FFFFFF;
 }
 
-
+.border{
+  border-bottom: 1px solid #B3B3B3;
+  width: 420px;
+}
 
 .edit-button {
   height: 17px;

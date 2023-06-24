@@ -16,8 +16,14 @@
 
 	<!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
 </head>
+<div class="blackBloc">
+	<button class="buttonEdition"><i class="fa-regular fa-pen-to-square"></i> Mode édition</button>
+	<input type="publierLesChangements" class="publier" value="publier les changements">
+</div>
 <body>
+	
 <header>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
@@ -36,7 +42,9 @@
 	<section id="introduction">
 		<figure>
 			<img src="./assets/images/sophie-bluel.png" alt="">
+			<button class="buttonModifier"><i class="fa-regular fa-pen-to-square"></i> Modifier</button>
 		</figure>
+		
 		<article>
 			<h2>Designer d'espace</h2>
 			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
@@ -45,7 +53,11 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
+	<article>
+		<h2>Mes Projets</h2> 
+		<button class="buttonModifierPro"><i class="fa-regular fa-pen-to-square"></i> Modifier</button>
+	</article>
+	
 		<button id="openModalBtn" class="hidden">Ouvrir la modale</button>
 		<aside class="modal hidden" >
 			<div class="modalContent">
@@ -72,7 +84,9 @@
 	  <h2>Galerie photo</h2>
 	  <div class="gallery-modal"></div>
 	  <div class="button-container">
+		<div class="border"></div> <br> <br>
 		<button id="addPhotoBtn">Ajouter une photo</button>
+		
 		<span id="deleteGalleryBtn" class="delete-button">Supprimer la galerie</span>
 	  </div>
 	</div>
