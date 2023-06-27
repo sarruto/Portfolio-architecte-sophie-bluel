@@ -18,6 +18,27 @@ html {
   margin-left: 0px;
   margin-right: 0px;
 }
+.buttonModifierTitre{
+  display: flex;
+  width: 58px;
+  height: 16px;
+  top: 601px;
+  left: 272px;
+  font-family: Work Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
+  border: none;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 0px;
+  margin-bottom: 25px;
+}
+
 .buttonEdition {
   height: 19px;
   font-family: Work Sans;
@@ -62,7 +83,7 @@ html {
   align-items: baseline;
 }
 
-.buttonModifierPro {
+#openModalBtn{
   width: 58px;
   height: 16px;
   top: 601px;
@@ -127,7 +148,7 @@ html {
   line-height: 30px;
   text-align: center;
   color: #000000;
-  padding: 60px 228px 42px 229px;
+  padding: 0px 228px 42px 229px;
 }
 
 .gallery-modal {
