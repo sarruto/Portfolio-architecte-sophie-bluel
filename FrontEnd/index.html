@@ -18,12 +18,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	
 </head>
-<div class="blackBloc">
-	<button class="buttonEdition"><i class="fa-regular fa-pen-to-square"></i> Mode édition</button>
-	<input type="publierLesChangements" class="publier" value="publier les changements">
-</div>
+
 <body>
-	
+	<div class="blackBloc">
+		<button class="buttonEdition"><i class="fa-regular fa-pen-to-square"></i> Mode édition</button>
+		<input type="publierLesChangements" class="publier" value="publier les changements">
+	</div>
 <header>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
@@ -59,28 +59,20 @@
 	</article>
 	
 		<button id="openModalBtn" class="hidden">Ouvrir la modale</button>
-		<aside class="modal hidden" >
-			<div class="modalContent">
-				
-					
-				
-			
-
-			</aside>
 		
 
-			<section id="galleryModal">
 			
 
-				<div id="galleryPicture"></div>
+				
 			
 				
 				<!-- Modale -->
 <div id="modal" class="modal">
 	<div class="modal-content">
+
 		<i class="fa-solid fa-xmark closeModal"></i>
 		
-		
+		<section class="modaldelete">
 	  <h2>Galerie photo</h2>
 	  <div class="gallery-modal"></div>
 	  <div class="button-container">
@@ -88,7 +80,13 @@
 		<button id="addPhotoBtn">Ajouter une photo</button>
 		
 		<span id="deleteGalleryBtn" class="delete-button">Supprimer la galerie</span>
+	
 	  </div>
+	</section>
+
+	<section class="modalAjout hidden" >
+
+	</section>
 	</div>
   </div>
 				
@@ -96,10 +94,10 @@
 					
 					
 
-				</section>	
 			
-			</div>
+			
 		
+
 		<div class="buttonBox"></div>
 			
 		
