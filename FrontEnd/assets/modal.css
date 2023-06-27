@@ -8,8 +8,11 @@ html {
 }
 
 .blackBloc {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   background-color: black;
-  width: 1440px;
+  width: 100%;
   height: 59px;
   margin-top: 0px;
   margin-left: 0px;

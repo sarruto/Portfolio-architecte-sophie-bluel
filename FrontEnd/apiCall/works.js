@@ -1,7 +1,7 @@
 // Faire appel à l'API pour les works
 
 const worksResponse = await fetch("http://localhost:5678/api/works");
-const works = await worksResponse.json();
+export const works = await worksResponse.json();
 
 // Fonction pour afficher les works
 

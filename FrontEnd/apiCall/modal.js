@@ -1,4 +1,4 @@
-
+import { works } from "./works.js";
 // Fonction pour afficher les works dans la galerie
 function displayWorks(works) {
   const gallery = document.querySelector('.gallery-modal');
@@ -17,6 +17,7 @@ function displayWorks(works) {
     figCaption.appendChild(editButton);
 
     let figure = document.createElement('figure');
+    figure.dataset.id=work.id;
 
     figure.appendChild(image);
     figure.appendChild(figCaption);
@@ -39,8 +40,8 @@ async function fetchWorks() {
 function openModal() {
   const modal = document.getElementById('modal');
   modal.style.display = 'block';
-
-  fetchWorks(); // Appel de la fonction pour récupérer et afficher les works dans la modale
+  displayWorks(works)
+  //fetchWorks(); // Appel de la fonction pour récupérer et afficher les works dans la modale
 }
 
 // Fonction pour fermer la modale
@@ -53,7 +54,7 @@ function closeModal() {
 const openModalBtn = document.getElementById('openModalBtn');
 
 // Sélection du bouton de fermeture de la modale
-const closeModalBtn = document.getElementById('closeModalBtn');
+const closeModalBtn = document.querySelector('.closeModal');
 
 // Écouteur d'événement pour le clic sur le bouton d'ouverture de la modale
 openModalBtn.addEventListener('click', openModal);
@@ -61,6 +62,15 @@ openModalBtn.addEventListener('click', openModal);
 // Écouteur d'événement pour le clic sur le bouton de fermeture de la modale
 closeModalBtn.addEventListener('click', closeModal);
 
+const modal=document.getElementById('modal');
+modal.addEventListener('click',closeModal) ;
+
+const modalContent=document.querySelector('.modal-content');
+modalContent.addEventListener('click',stopPropagation);
+function stopPropagation(event) {
+event.stopPropagation()
+
+}
 
 
 
