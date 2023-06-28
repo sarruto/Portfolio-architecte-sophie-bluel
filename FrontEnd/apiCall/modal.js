@@ -12,9 +12,10 @@ function displayWorks(works) {
     let editButton = document.createElement('button');
     editButton.textContent = 'éditer';
     editButton.classList.add('edit-button');
-
+    
     let figCaption = document.createElement('figcaption');
     figCaption.appendChild(editButton);
+    
 
     let figure = document.createElement('figure');
     figure.dataset.id=work.id;
