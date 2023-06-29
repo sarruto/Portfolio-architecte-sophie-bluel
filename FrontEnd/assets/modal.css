@@ -165,12 +165,37 @@ html {
 .gallery-modal figure {
   width: 100%;
   margin: 0;
+  position: relative;
 }
 
-.gallery-modal img {
+.gallery-modal figure > img {
   width: 90%;
   height: 104px;
   object-fit: cover;
+}
+
+
+
+.trash{
+  color: #ffffff;
+  /*margin: auto;*/
+  height: 9px;
+  width: 9px;
+
+}
+
+.backicons{
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 17px;
+  width: 17px;
+  border-radius: 2px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
 }
 #addPhotoBtn {
   width: 237px;

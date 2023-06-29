@@ -22,20 +22,21 @@ function displayWorks(works) {
 
     figure.appendChild(image);
     figure.appendChild(figCaption);
+    figure.appendChild(getIconTrash());
     gallery.appendChild(figure);
   });
 }
-
-// Fonction pour récupérer les works depuis l'API
-async function fetchWorks() {
-  try {
-    const worksResponse = await fetch('http://localhost:5678/api/works');
-    const works = await worksResponse.json();
-    displayWorks(works);
-  } catch (error) {
-    console.log(error);
-  }
+function getIconTrash() {
+  let img = document.createElement('img');
+  img.src = "./assets/icons/trash.png";
+  let back = document.createElement('div');
+  back.classList.add('backicons');
+  img.classList.add('trashicons');
+  back.appendChild(img);
+  return back;
 }
+
+
 
 // Fonction pour ouvrir la modale et afficher la galerie des works
 function openModal() {
@@ -112,4 +113,14 @@ buttonBox.classList.toggle("hidden");
 
 
 
-  
+  /*
+  // Fonction pour récupérer les works depuis l'API
+async function fetchWorks() {
+  try {
+    const worksResponse = await fetch('http://localhost:5678/api/works');
+    const works = await worksResponse.json();
+    displayWorks(works);
+  } catch (error) {
+    console.log(error);
+  }
+}*/
