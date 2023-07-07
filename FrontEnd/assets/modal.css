@@ -7,60 +7,7 @@ html {
   box-sizing: inherit;
 }
 
-.blackBloc {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-color: black;
-  width: 100%;
-  height: 59px;
-  margin-top: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-.buttonModifierTitre{
-  display: flex;
-  width: 58px;
-  height: 16px;
-  top: 601px;
-  left: 272px;
-  font-family: Work Sans;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: 0em;
-  text-align: center;
-  color: #000000;
-  border: none;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-items: baseline;
-  padding: 0px;
-  margin-bottom: 25px;
-}
 
-.buttonEdition {
-  height: 19px;
-  font-family: Work Sans;
-  font-size: 16px;
-  font-weight: 400;
-  border: #000000;
-  color: #ffffff;
-  background: #000000;
-  padding-top: 12px;
-}
-.publier {
-  width: 216px;
-  height: 38px;
-  font-family: Work Sans;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19px;
-  letter-spacing: 0em;
-  text-align: center;
-  color: black;
-  border-radius: 60px;
-}
 
 .buttonModifier {
   width: 58px;
@@ -81,6 +28,27 @@ html {
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: baseline;
+}
+
+.buttonModifierTitre{
+  display: flex;
+  width: 58px;
+  height: 16px;
+  top: 601px;
+  left: 272px;
+  font-family: Work Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
+  border: none;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 0px;
+  margin-bottom: 25px;
 }
 
 #openModalBtn{
@@ -197,6 +165,28 @@ html {
   top: 10px;
 
 }
+
+.expand{
+  color: #ffffff;
+  
+  height: 11px;
+  width: 11px;
+
+}
+
+.backiconsExpand{
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 17px;
+  width: 17px;
+  border-radius: 2px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+}
 #addPhotoBtn {
   width: 237px;
   height: 36px;
@@ -231,7 +221,7 @@ html {
 }
 
 .delete-button {
-  width: 230px;
+  
   height: 17px;
   font-family: "Syne";
   font-size: 14px;
