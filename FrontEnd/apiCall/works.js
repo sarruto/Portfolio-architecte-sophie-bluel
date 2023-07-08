@@ -5,7 +5,7 @@ export const works = await worksResponse.json();
 
 // Fonction pour afficher les works
 
-function displayWorks(works) {
+export function displayWorks(works) {
   const gallery = document.querySelector(".gallery");
   gallery.innerHTML = ""; // Effacer le contenu précédent de la galerie
 

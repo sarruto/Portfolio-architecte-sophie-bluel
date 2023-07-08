@@ -1,7 +1,7 @@
-import { works, displayWorks } from "./works.js";
+import { works } from "./works.js";
 
 // Fonction pour afficher les works dans la galerie de la modale
-function displayModalWorks(works) {
+function displayWorks(works) {
   const gallery = document.querySelector(".gallery-modal");
   gallery.innerHTML = ""; // Effacer le contenu précédent de la galerie
 
@@ -23,7 +23,7 @@ function displayModalWorks(works) {
     figure.appendChild(image);
     figure.appendChild(figCaption);
     figure.appendChild(getIconTrash(work.id)); // Ajout de l'icône de suppression
-    figure.appendChild(getIconExpand());
+
     gallery.appendChild(figure);
   });
 }
@@ -37,76 +37,47 @@ function getIconTrash(workId) {
   back.appendChild(img);
 
   // Ajout de l'événement de suppression du work
-  //back.addEventListener("click", () => {
-   // deleteWork(workId);
-    //console.log("delete")
-  //});
+  back.addEventListener("click", () => {
+    deleteWork(workId);
+    console.log("delete")
+  });
 
   return back;
 }
-function getIconExpand() {
-  let img = document.createElement('img');
-  img.src = "./assets/icons/expand.png";
-  let back = document.createElement('div');
-  back.classList.add('backiconsExpand');
-  img.classList.add('expandicons');
-  back.appendChild(img);
-
-  return back;
-}
-
 
 // Fonction pour supprimer un work
 
 async function deleteWork(workId) {
-  console.log (workId);
-  const token = sessionStorage.getItem("token");
-
   try {
     const response = await fetch(`http://localhost:5678/api/works/${workId}`, {
-      method: "DELETE",
-      headers: {
-        "Authorization": `Bearer ${token}`,
-        "Content-Type": "application/json",
-      }
+      method: "DELETE"
     });
 
     if (response.ok) {
       // Suppression réussie, mettre à jour la galerie
-     // const updatedWorksResponse = await fetch("http://localhost:5678/api/works");
-      //const updatedWorks = await updatedWorksResponse.json();
-      //displayWorks(updatedWorks);
-      return true;
+      const updatedWorksResponse = await fetch("http://localhost:5678/api/works");
+      const updatedWorks = await updatedWorksResponse.json();
+      displayWorks(updatedWorks);
     } else {
       console.error("Erreur lors de la suppression du work.");
-      return false;
     }
   } catch (error) {
     console.error("Erreur lors de la suppression du work :", error);
   }
 }
 
-
-
-
 // Fonction pour ouvrir la modale et afficher la galerie des works
 function openModal() {
   const modal = document.getElementById("modal");
   modal.style.display = "block";
-  displayModalWorks(works);
+  displayWorks(works);
 
   // Récupérer tous les éléments avec la classe "backicons" et ajouter l'événement de suppression
   const backIcons = document.querySelectorAll(".backicons");
   backIcons.forEach(icon => {
     const workId = icon.parentElement.dataset.id; // Récupérer l'id du work
-    icon.addEventListener("click", (event) => {
-      if(deleteWork(workId)) {
-        event.target.closest("figure").remove();
-        let index= works.findIndex(work => work.id === workId);
-        works.splice(index, 1);
-        displayWorks(works);
-      }
-  
+    icon.addEventListener("click", () => {
+      deleteWork(workId);
     });
   });
 }
@@ -124,3 +95,22 @@ openModalBtn.addEventListener("click", openModal);
 // Événement pour fermer la modale lors du clic sur la croix
 const closeModalBtn = document.querySelector(".closeModal");
 closeModalBtn.addEventListener("click", closeModal);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
