@@ -95,6 +95,8 @@ function openModal() {
   modal.style.display = "block";
   displayModalWorks(works);
 
+  
+
   // Récupérer tous les éléments avec la classe "backicons" et ajouter l'événement de suppression
   const backIcons = document.querySelectorAll(".backicons");
   backIcons.forEach(icon => {
