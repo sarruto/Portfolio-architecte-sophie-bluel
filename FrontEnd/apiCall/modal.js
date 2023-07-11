@@ -97,10 +97,10 @@ function openModal() {
 
 
   // Fonction pour ouvrir la modale et ajouter un work
-function openModalAjout() {
-  const modal = document.getElementById("modalAjout");
-  modal.style.display = "block";
-  displayModalWorks(works);
+//function openModalAjout() {
+  //const modal = document.getElementById("modalAjout");
+  //modal.style.display = "block";
+  //displayModalWorks(works);
   
 
   // Récupérer tous les éléments avec la classe "backicons" et ajouter l'événement de suppression
@@ -117,11 +117,16 @@ function openModalAjout() {
   
     });
   });
-}}
+}
 
 // Événement pour ouvrir la modale ajout photo lors du clic sur le bouton
 const addPhotoBtn = document.getElementById("addPhotoBtn");
-openModalBtn.addEventListener("click", openModal);
+addPhotoBtn.addEventListener("click", toggleModal);
+
+function toggleModal(){
+  document.querySelector(".modaldelete").classList.toggle("hidden");
+  document.querySelector(".modalAjout").classList.toggle("hidden");
+}
 
 // Fonction pour fermer la modale
 function closeModal() {
