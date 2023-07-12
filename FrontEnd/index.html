@@ -70,7 +70,7 @@
 				<!-- Modale supprimer une photo -->
 	<div id="modal" class="modal">
 	<div class="modal-content">
-
+		
 		<i class="fa-solid fa-xmark closeModal"></i>
 		
 		<section class="modaldelete">
@@ -88,11 +88,28 @@
 	</section>
 
 	<section class="modalAjout hidden" >
+		<img src="./assets/icons/arrow-left.png" alt="icone flèche" class="arrowLeft">
+		
 		<h2>Ajout photo</h2>
-
 		
+		<img src="./assets/icons/picture.png" alt="icone image">
 		
-	</article>
+		<button id="addPictureBtn">+ Ajouter photo</button>
+		
+		<p>jpg, png : 4mo max</p>
+		
+		<form action="#" method="post" id="login-form">
+			<label for="title">Titre</label>
+			<input type="title" name="title" id="title">
+			
+			<label for="category">Catégorie</label>
+			<input type="category" name="category" id="category">
+			
+			<div class="border"></div> <br> <br>
+			
+			<button id="validerBtn">Valider</button>
+		</form>
+	
 			
 
 

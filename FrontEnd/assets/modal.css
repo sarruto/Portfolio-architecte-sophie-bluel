@@ -95,12 +95,22 @@ html {
 .closeModal {
   height: 12.01px;
   width: 12.01px;
-  left: 5.99px;
+  left: 6px;
   top: 6px;
   color: #000000;
   float: right;
   padding: 36px 36px 0px 0px;
 }
+
+.arrowLeft{
+  width: 21px;
+  height: 18px;
+  color:black;
+  float: left;
+  top: 1px;
+  
+}
+
 
 .closeModal:hover,
 .closeModal:focus {
