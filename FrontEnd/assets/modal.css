@@ -7,8 +7,6 @@ html {
   box-sizing: inherit;
 }
 
-
-
 .buttonModifier {
   width: 58px;
   height: 16px;
@@ -30,7 +28,7 @@ html {
   align-items: baseline;
 }
 
-.buttonModifierTitre{
+.buttonModifierTitre {
   display: flex;
   width: 58px;
   height: 16px;
@@ -51,7 +49,7 @@ html {
   margin-bottom: 25px;
 }
 
-#openModalBtn{
+#openModalBtn {
   width: 58px;
   height: 16px;
   top: 601px;
@@ -102,16 +100,6 @@ html {
   padding: 36px 36px 0px 0px;
 }
 
-.arrowLeft{
-  width: 21px;
-  height: 18px;
-  color:black;
-  float: left;
-  top: 1px;
-  
-}
-
-
 .closeModal:hover,
 .closeModal:focus {
   color: #000;
@@ -152,17 +140,14 @@ html {
   object-fit: cover;
 }
 
-
-
-.trash{
+.trash {
   color: #ffffff;
   /*margin: auto;*/
   height: 9px;
   width: 9px;
-
 }
 
-.backicons{
+.backicons {
   background-color: #000;
   display: flex;
   justify-content: center;
@@ -173,18 +158,16 @@ html {
   position: absolute;
   right: 10px;
   top: 10px;
-
 }
 
-.expand{
+.expand {
   color: #ffffff;
-  
+
   height: 11px;
   width: 11px;
-
 }
 
-.backiconsExpand{
+.backiconsExpand {
   background-color: #000;
   display: flex;
   justify-content: center;
@@ -195,7 +178,6 @@ html {
   position: absolute;
   right: 30px;
   top: 10px;
-
 }
 #addPhotoBtn {
   width: 237px;
@@ -231,7 +213,6 @@ html {
 }
 
 .delete-button {
-  
   height: 17px;
   font-family: "Syne";
   font-size: 14px;
@@ -244,4 +225,91 @@ html {
 
 .hidden {
   display: none;
+}
+
+.modalAjout {
+  width: 630px;
+  height: 670px;
+  top: 660px;
+  left: 405px;
+  border-radius: 10px;
+}
+
+.arrowLeft {
+  width: 21px;
+  height: 18px;
+  color: black;
+  float: left;
+  top: 1px;
+}
+.blueBorder {
+  width: 420px;
+  height: 169px;
+  top: 786px;
+  left: 510px;
+  border-radius: 3px;
+  background: #e8f1f6;
+  margin: 30px 105px 50px 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.iconsPicture {
+  width: 58px;
+  height: 58px;
+}
+#addPictureBtn {
+  width: 178px;
+  height: 38px;
+  top: 881px;
+  left: 633px;
+  border-radius: 50px;
+  background: #cbd6dc;
+  color: #306685;
+  font-family: Work Sans;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+#title{
+  width: 420px;
+  height: 51px;
+  top: 1011px;
+  left: 510px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 14px 0px #00000017;
+  font-family: Work Sans;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #3D3D3D;
+
+}
+
+
+#category{
+  width: 420px;
+height: 51px;
+top: 1109px;
+left: 510px;
+background: #FFFFFF;
+box-shadow: 0px 4px 14px 0px #00000017;
+font-family: Work Sans;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #3D3D3D;
+
+  
 }
