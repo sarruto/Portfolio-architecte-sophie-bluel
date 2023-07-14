@@ -190,6 +190,7 @@ html {
 .border {
   border-bottom: 1px solid #b3b3b3;
   width: 420px;
+  margin: 3em 0em 3em 0em;
 }
 
 .edit-button {
@@ -239,8 +240,13 @@ html {
   width: 21px;
   height: 18px;
   color: black;
-  float: left;
-  top: 1px;
+  
+  
+  
+  top: 686px;
+  left: 435px;
+
+
 }
 .blueBorder {
   width: 420px;
@@ -255,7 +261,6 @@ html {
   justify-content: center;
   align-items: center;
 }
-
 
 .iconsPicture {
   width: 58px;
@@ -278,38 +283,70 @@ html {
   margin-top: 20px;
 }
 
-#title{
+.formatTexte {
+  font-family: Work Sans;
+  font-size: 10px;
+  font-weight: 400;
+  height: 12px;
+  letter-spacing: 0em;
+  text-align: center;
+  width: 94px;
+  top: 924px;
+  left: 673px;
+  color: #444444;
+}
+.validerButton {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: flex-start;
+}
+
+#validerBtn {
+  width: 237px;
+  height: 36px;
+  border-radius: 60px;
+  background: #a7a7a7;
+  color: white;
+  border: none;
+}
+
+#ajoutPicture form {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: flex-start;
+}
+
+#ajoutPicture input {
   width: 420px;
   height: 51px;
   top: 1011px;
   left: 510px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 4px 14px 0px #00000017;
+  border: none;
+  margin: 1em 0 1em 0;
+}
+#ajoutPicture label {
+  width: 65px;
+  height: 16px;
+  top: 1083px;
+  left: 510px;
   font-family: Work Sans;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
-  color: #3D3D3D;
-
+  color: #3d3d3d;
 }
-
-
-#category{
-  width: 420px;
-height: 51px;
-top: 1109px;
-left: 510px;
-background: #FFFFFF;
-box-shadow: 0px 4px 14px 0px #00000017;
-font-family: Work Sans;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #3D3D3D;
-
-  
+#ajoutPicture textarea {
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
