@@ -128,6 +128,8 @@ function toggleModal(){
   document.querySelector(".modalAjout").classList.toggle("hidden");
 }
 
+
+
 // Fonction pour fermer la modale
 function closeModal() {
   const modal = document.getElementById("modal");

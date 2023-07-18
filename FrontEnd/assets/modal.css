@@ -240,9 +240,6 @@ html {
   width: 21px;
   height: 18px;
   color: black;
-  
-  
-  
   top: 686px;
   left: 435px;
 
@@ -281,6 +278,7 @@ html {
   text-align: center;
   margin-bottom: 10px;
   margin-top: 20px;
+  border: none;
 }
 
 .formatTexte {
