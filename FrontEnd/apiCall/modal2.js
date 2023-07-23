@@ -1,6 +1,6 @@
 
 // Événement pour retourner à la modale delate photo lors du clic sur le bouton
-const arrowLeft = document.getElementById("arrowLeft");
+const arrowLeft = document.querySelector(".arrowLeft");
 arrowLeft.addEventListener("click", toggleModal);
 
 function toggleModal(){

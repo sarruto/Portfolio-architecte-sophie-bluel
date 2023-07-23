@@ -92,6 +92,7 @@
         <!-- Modale supprimer une photo -->
         <div id="modal" class="modal">
           <div class="modal-content">
+			
             <i class="fa-solid fa-xmark closeModal"></i>
 
             <section class="modaldelete">
@@ -109,7 +110,7 @@
             </section>
 
             <section class="modalAjout hidden">
-              <img
+				<img
                 src="./assets/icons/arrow-left.png"
                 alt="icone flèche"
                 class="arrowLeft"
@@ -122,8 +123,8 @@
                   alt="icone image"
                   class="iconsPicture"
                 />
-
-                <button id="addPictureBtn">+ Ajouter photo</button>
+				<label for="image">+ Ajouter photo</label>
+                <input type="file" id="image" name="image"></input>
 
                 <div class="formatTexte" >jpg, png : 4mo max</div>
               </div>
