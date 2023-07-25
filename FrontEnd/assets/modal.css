@@ -71,7 +71,6 @@ html {
 .modal {
   display: none;
   position: fixed;
-
   left: 0;
   top: 0;
   width: 100%;
@@ -236,17 +235,13 @@ html {
   border-radius: 10px;
 }
 
-
 .arrowLeft {
   width: 21px;
   height: 18px;
   color: black;
   position: absolute;
-  top: 32px; 
+  top: 32px;
   left: 30px;
-
-
-
 }
 .blueBorder {
   width: 420px;
@@ -266,7 +261,7 @@ html {
   width: 58px;
   height: 58px;
 }
- .blueBorder label{
+.blueBorder label {
   width: 178px;
   height: 38px;
   top: 881px;
@@ -287,7 +282,7 @@ html {
   justify-content: center;
 }
 
-#image{
+#image {
   display: none;
 }
 
