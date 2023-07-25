@@ -20,7 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
   blueBorderDiv.appendChild(imagePreview);
   const titleInput = document.getElementById("title");
 
-  imageInput.addEventListener("change", function () {
+
+
+
+  /*imageInput.addEventListener("change", function () {
     const file = this.files[0];
     if (file) {
       const reader = new FileReader();
@@ -44,6 +47,30 @@ document.addEventListener("DOMContentLoaded", function () {
       iconsPictureImg.style.display = "block";
     }
   });
+  */
+
+  imageInput.addEventListener("change", function (){
+    const file = this.files[0];
+    const maxsize = 4*1024*1024;
+    
+    if (file.size > maxsize){
+      console.log("image supérieur à 4mo")
+      return false
+
+    }
+
+    let img = document.querySelector(".preview img");
+    img.src = URL.createObjectURL(file);
+    img.onload = () => {
+      URL.revokeObjectURL(this.source)
+      document.querySelector(".preview").classList.toggle("hidden")
+      document.querySelector(".blueBorder").classList.toggle("hidden")
+    } 
+  }
+  )
+
+
+
 
   // Ajoute un événement de clic au bouton "Retour"
   returnButton.addEventListener("click", resetFields);
