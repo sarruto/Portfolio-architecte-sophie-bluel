@@ -352,7 +352,18 @@ html {
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
+.preview {
+  top: 660px;
+  left: 405px;
+}
 
+.preview img{
+  width: 129px;
+  height: 193px;
+  flex-shrink: 0;
+  
+
+}
 
 
 
