@@ -28,7 +28,7 @@ export function displayWorks(works) {
 // Faire appel à l'API pour les categories
 
 const categoriesResponse = await fetch("http://localhost:5678/api/categories");
-const categories = await categoriesResponse.json();
+export const categories = await categoriesResponse.json();
 
 // Fonction pour afficher les boutons de catégorie et gérer le filtre
 

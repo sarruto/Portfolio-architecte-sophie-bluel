@@ -1,3 +1,5 @@
+import { categories } from "./works.js";
+
 // Événement pour retourner à la modale delate photo lors du clic sur le bouton
 const arrowLeft = document.querySelector(".arrowLeft");
 arrowLeft.addEventListener("click", toggleModal);
@@ -49,6 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   */
 
+  let imageOk = false;
+  let titleOk = false;
+  let categorieOk = false;
+
   imageInput.addEventListener("change", function (){
     const file = this.files[0];
     const maxsize = 4*1024*1024;
@@ -66,8 +72,23 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector(".preview").classList.toggle("hidden")
       document.querySelector(".blueBorder").classList.toggle("hidden")
     } 
+  })
+
+  titleInput.addEventListener("change", function(){
+    if (this.value.length>3 &&  this.value.length<50  ) {
+      titleOk = true; 
+
+    }
+  else {
+  titleOk = false; 
+  console.log("Taille de titre invalide")
+
   }
-  )
+       
+console.log (this.value)
+console.log (categories)
+  })
+
 
 
 
