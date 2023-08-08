@@ -84,10 +84,18 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("Taille de titre invalide")
 
   }
-       
-console.log (this.value)
-console.log (categories)
   })
+  let select = document.getElementById(category);
+  categories.foreach (category => {
+    let option = document.createElement("option");
+    option.value = category.id;
+    option.label = category.name;
+    select.add (option,null);
+  })
+    
+  
+  
+
 
 
 
