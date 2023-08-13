@@ -9,7 +9,7 @@ function toggleModal() {
   document.querySelector(".modaldelete").classList.toggle("hidden");
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+ 
   const imageInput = document.getElementById("image");
   const imagePreview = document.createElement("img");
   const blueBorderDiv = document.querySelector(".blueBorder");
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   })
   let select = document.getElementById(category);
-  categories.foreach (category => {
+  categories.forEach(category=> {
     let option = document.createElement("option");
     option.value = category.id;
     option.label = category.name;
@@ -116,4 +116,4 @@ document.addEventListener("DOMContentLoaded", function () {
     formatTextDiv.style.display = "block";
     iconsPictureImg.style.display = "block";
   }
-});
+;
