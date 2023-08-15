@@ -116,4 +116,4 @@ function toggleModal() {
     formatTextDiv.style.display = "block";
     iconsPictureImg.style.display = "block";
   }
-;
+
