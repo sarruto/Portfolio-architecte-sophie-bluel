@@ -305,7 +305,7 @@ html {
   align-items: flex-start;
 }
 
-#validerBtn {
+.validerButton input:disabled {
   width: 237px;
   height: 36px;
   border-radius: 60px;
@@ -313,7 +313,9 @@ html {
   color: white;
   border: none;
 }
-
+.validerButton input:enabled{
+  background: green;
+}
 #ajoutPicture form {
   text-align: left;
   margin-top: 30px;

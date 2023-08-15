@@ -84,8 +84,10 @@ function toggleModal() {
   console.log("Taille de titre invalide")
 
   }
+  checkEntries();
+  
   })
-  let select = document.getElementById(category);
+  let select = document.getElementById("category");
   categories.forEach(category=> {
     let option = document.createElement("option");
     option.value = category.id;
@@ -93,7 +95,14 @@ function toggleModal() {
     select.add (option,null);
   })
     
-  
+  function checkEntries() {
+    if ( imageOk && titleOk && categorieOk){
+      document.querySelector("validerButton input").disabled=false;
+    }
+    else{
+      document.querySelector("validerButton input").disabled=true;
+    }
+  }
   
 
 
