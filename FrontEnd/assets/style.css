@@ -349,6 +349,11 @@ input[type="submit"] {
   border-radius: 60px;
 }
 
+.error-message {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
 
 .motDePasse{
   width: 139px;
@@ -358,7 +363,6 @@ input[type="submit"] {
   font-size: 14px;
   text-decoration-line: underline;
   color: #3D3D3D;
-  
   }
 
 footer nav ul {
@@ -379,18 +383,12 @@ footer nav ul {
 
 .hidden{
   display: none;  
-
 }
+
 /*.hidden{
-
   display: none;  
-
 }
 */
 
-.error-message {
-  display: none;
-  color: red;
-  font-weight: bold;
-}
+
 
