@@ -296,6 +296,18 @@ html {
   left: 673px;
   color: #444444;
 }
+.imageError{
+  font-family: Work Sans;
+  font-size: 10px;
+  font-weight: 400;
+  height: 12px;
+  letter-spacing: 0em;
+  text-align: center;
+  width: 94px;
+  top: 924px;
+  left: 673px;
+  color: #444444;
+}
 .validerButton {
   margin-top: 30px;
   display: flex;

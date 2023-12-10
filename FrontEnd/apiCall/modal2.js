@@ -1,14 +1,11 @@
 import { categories } from "./works.js";
-
 // Événement pour retourner à la modale delate photo lors du clic sur le bouton
 const arrowLeft = document.querySelector(".arrowLeft");
 arrowLeft.addEventListener("click", toggleModal);
-
 function toggleModal() {
   document.querySelector(".modalAjout").classList.toggle("hidden");
   document.querySelector(".modaldelete").classList.toggle("hidden");
 }
-
  
   const imageInput = document.getElementById("image");
   const imagePreview = document.createElement("img");
@@ -18,13 +15,8 @@ function toggleModal() {
   const iconsPictureImg = blueBorderDiv.querySelector(".iconsPicture");
   const returnButton = document.querySelector(".arrowLeft");
   const closeButton = document.querySelector(".closeModal");
-
   blueBorderDiv.appendChild(imagePreview);
   const titleInput = document.getElementById("title");
-
-
-
-
   /*imageInput.addEventListener("change", function () {
     const file = this.files[0];
     if (file) {
@@ -35,7 +27,6 @@ function toggleModal() {
       reader.readAsDataURL(file);
       const title = file.name.replace(/\.[^/.]+$/, "");
       titleInput.value = title;
-
       blueBorderDiv.classList.add("imageSelected");
       addPhotoLabel.style.display = "none";
       formatTextDiv.style.display = "none";
@@ -50,11 +41,9 @@ function toggleModal() {
     }
   });
   */
-
   let imageOk = false;
   let titleOk = false;
   let categorieOk = false;
-
   imageInput.addEventListener("change", function (){
     const file = this.files[0];
     const maxsize = 4*1024*1024;
@@ -64,15 +53,8 @@ function toggleModal() {
       imageOk = false;
       checkEntries();
       return;
-
     }
-    try {
-      let ajoutNewImage  = document.getElementById ("newImage")
-      ajoutNewImage.createElement("div")
-    } catch {
-      console.log("L'image dépasse 4mo");
-    }
-
+    
     let img = document.querySelector(".preview img");
     img.src = URL.createObjectURL(file);
     img.onload = () => {
@@ -83,6 +65,8 @@ function toggleModal() {
     imageOk = true;
     checkEntries();
   })
+
+  
 
   titleInput.addEventListener("change", function(){
     if (this.value.length>3 &&  this.value.length<50  ) {
@@ -122,16 +106,10 @@ function toggleModal() {
   }
   
   
-
-
-
-
   // Ajoute un événement de clic au bouton "Retour"
   returnButton.addEventListener("click", resetFields);
-
   // Ajoute un événement de clic à l'icône de fermeture
   closeButton.addEventListener("click", resetFields);
-
   function resetFields() {
     imageInput.value = "";
     imagePreview.src = "";
@@ -142,6 +120,10 @@ function toggleModal() {
     iconsPictureImg.style.display = "block";
   }
 
-
+  let imageError = document.querySelector (".imageError");
+  imageError = () => {
+    document.querySelector("imageError").classList.toggle("hidden")
+  };
+    console.log("L'image dépasse 4mo")
 
   // Faire appel à l'API pour les works
