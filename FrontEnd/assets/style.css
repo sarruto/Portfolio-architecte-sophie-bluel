@@ -355,7 +355,7 @@ input[type="submit"] {
   font-weight: bold;
 }
 
-.motDePasse{
+.motDePasse {
   width: 139px;
   height: 16px;
   font-family: Work Sans;
@@ -363,6 +363,7 @@ input[type="submit"] {
   font-size: 14px;
   text-decoration-line: underline;
   color: #3D3D3D;
+  text-align: center;
   }
 
 footer nav ul {

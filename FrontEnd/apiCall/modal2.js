@@ -142,3 +142,6 @@ function toggleModal() {
     iconsPictureImg.style.display = "block";
   }
 
+
+
+  // Faire appel à l'API pour les works
