@@ -309,7 +309,6 @@ html {
   color: #444444;
 }
 .validerButton {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -333,6 +332,12 @@ html {
   color: white;
   border: none;
 }
+
+.imageError{
+  text-align: center;
+  color: red;
+}
+
 #ajoutPicture form {
   text-align: left;
   margin-top: 30px;
@@ -396,6 +401,10 @@ html {
 .preview{
   display: flex;
   justify-content: center;
+  border-radius: 3px;
+  background: #e8f1f6;
+   margin: 30px 105px 50px 105px;
+  display: flex;
 }
 
 

@@ -104,15 +104,18 @@ function toggleModal() {
   select.addEventListener("change",function() {
     if (this.value){
       categorieOk = true;
+      document.querySelector(".categoryError").classList.toggle("hidden")
     }
     else{
       categorieOk = false;
+      document.querySelector(".categoryError").classList.toggle("hidden")
       console.log("Une catégorie est nécessaire")
     }
     checkEntries();
     })
   function checkEntries() {
     if ( imageOk && titleOk && categorieOk){
+      
       console.log("0k")
       document.querySelector(".validerButton input").disabled=false;
     }
