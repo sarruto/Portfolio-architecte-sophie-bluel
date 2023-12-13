@@ -25,7 +25,7 @@ export function displayWorks(works) {
   });
 }
 
-// Faire appel à l'API pour les categories
+// Faire appel à l'API pour les catégories
 
 const categoriesResponse = await fetch("http://localhost:5678/api/categories");
 export const categories = await categoriesResponse.json();

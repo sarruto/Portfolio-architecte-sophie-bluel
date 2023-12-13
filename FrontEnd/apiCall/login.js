@@ -34,7 +34,7 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
         // Stocker la réponse du login dans le localStorage
        sessionStorage.setItem('token', data.token);
        
-       //sessionStorage.setItem('loginResponse', JSON.stringify(data));
+      
         // Rediriger vers la page du site 
         window.location.href = "index.html";
       })

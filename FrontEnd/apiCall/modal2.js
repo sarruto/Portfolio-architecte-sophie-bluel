@@ -47,11 +47,12 @@ function toggleModal() {
   imageInput.addEventListener("change", function (){
     const file = this.files[0];
     const maxsize = 4*1024*1024;
-    
+  
     if (file.size > maxsize){
       console.log("image supérieur à 4mo")
+      document.querySelector(".imageError").classList.toggle("hidden")
       imageOk = false;
-      checkEntries();
+      checkEntries()
       return;
     }
     
@@ -63,22 +64,37 @@ function toggleModal() {
       document.querySelector(".blueBorder").classList.toggle("hidden")
     };
     imageOk = true;
-    checkEntries();
+    document.querySelector(".imageError").classList.toggle("hidden")
+    checkEntries(); 
   })
 
   
-
-  titleInput.addEventListener("change", function(){
-    if (this.value.length>3 &&  this.value.length<50  ) {
+  let titlelState = false
+  titleInput.addEventListener("input", function(){
+    if (this.value.length>3 && this.value.length<50  ) {
       titleOk = true; 
+      if (titlelState === false){
+        document.querySelector(".titleError").classList.toggle("hidden")
+        titlelState = true;
+      }
+      
     }
     else {
     titleOk = false; 
+    if (titlelState === true){
+      document.querySelector(".titleError").classList.toggle("hidden")
+      titlelState = false;
+    }
     console.log("Taille de titre invalide")
     }
     checkEntries();
   })
   let select = document.getElementById("category");
+  console.log(categories)
+  categories.unshift({
+    id:0,
+    name: ""
+  })
   categories.forEach(category=> {
     let option = document.createElement("option");
     option.value = category.id;
@@ -120,10 +136,6 @@ function toggleModal() {
     iconsPictureImg.style.display = "block";
   }
 
-  let imageError = document.querySelector (".imageError");
-  imageError = () => {
-    document.querySelector("imageError").classList.toggle("hidden")
-  };
-    console.log("L'image dépasse 4mo")
+  
 
   // Faire appel à l'API pour les works
