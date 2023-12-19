@@ -17,30 +17,7 @@ function toggleModal() {
   const closeButton = document.querySelector(".closeModal");
   blueBorderDiv.appendChild(imagePreview);
   const titleInput = document.getElementById("title");
-  /*imageInput.addEventListener("change", function () {
-    const file = this.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.addEventListener("load", function () {
-        imagePreview.src = reader.result;
-      });
-      reader.readAsDataURL(file);
-      const title = file.name.replace(/\.[^/.]+$/, "");
-      titleInput.value = title;
-      blueBorderDiv.classList.add("imageSelected");
-      addPhotoLabel.style.display = "none";
-      formatTextDiv.style.display = "none";
-      iconsPictureImg.style.display = "none";
-    } else {
-      blueBorderDiv.classList.remove("imageSelected");
-      imagePreview.src = "";
-      titleInput.value = "";
-      addPhotoLabel.style.display = "block";
-      formatTextDiv.style.display = "block";
-      iconsPictureImg.style.display = "block";
-    }
-  });
-  */
+  
   let imageOk = false;
   let titleOk = false;
   let categorieOk = false;
@@ -93,7 +70,7 @@ function toggleModal() {
   console.log(categories)
   categories.unshift({
     id:0,
-    name: ""
+    name: "Tous"
   })
   categories.forEach(category=> {
     let option = document.createElement("option");
@@ -101,18 +78,19 @@ function toggleModal() {
     option.label = category.name;
     select.add (option,null);
   })
-  select.addEventListener("change",function() {
-    if (this.value){
+  select.addEventListener("change",() => {
+    if (select.value !=="0"){
       categorieOk = true;
-      document.querySelector(".categoryError").classList.toggle("hidden")
+      document.querySelector(".categoryError").classList.add("hidden");
     }
     else{
       categorieOk = false;
-      document.querySelector(".categoryError").classList.toggle("hidden")
+      document.querySelector(".categoryError").classList.remove("hidden");
       console.log("Une catégorie est nécessaire")
     }
-    checkEntries();
-    })
+    console.log(categorieOk);
+    });
+
   function checkEntries() {
     if ( imageOk && titleOk && categorieOk){
       
@@ -140,5 +118,27 @@ function toggleModal() {
   }
 
   
+// Faire appel à l'API pour les works
 
-  // Faire appel à l'API pour les works
+ // Création d'un nouvel objet FormData
+const formData = new FormData();
+
+// Ajout des données au formulaire
+formData.append("image", "image");
+formData.append("title", "title");
+formData.append('categorie', "category");
+
+// Configuration de la requête
+const options = {
+  method: "POST",
+  body: formData
+};
+
+// Envoi de la requête
+fetch("http://localhost:5678/api/works")
+.then(response => response.json())
+.then(data => {
+  console.log('Réponse de l\'API:', data);
+  // Faites quelque chose avec la réponse de l'API ici
+})
+.catch(error => console.error('Erreur lors de l\'appel API:', error));
