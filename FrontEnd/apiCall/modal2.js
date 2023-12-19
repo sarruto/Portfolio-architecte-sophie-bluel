@@ -79,6 +79,7 @@ function toggleModal() {
     select.add (option,null);
   })
   select.addEventListener("change",() => {
+    
     if (select.value !=="0"){
       categorieOk = true;
       document.querySelector(".categoryError").classList.add("hidden");
@@ -88,16 +89,18 @@ function toggleModal() {
       document.querySelector(".categoryError").classList.remove("hidden");
       console.log("Une catégorie est nécessaire")
     }
-    console.log(categorieOk);
+    
+    checkEntries();
     });
 
   function checkEntries() {
     if ( imageOk && titleOk && categorieOk){
-      
+
       console.log("0k")
       document.querySelector(".validerButton input").disabled=false;
     }
     else{
+      
       document.querySelector(".validerButton input").disabled=true;
     }
   }
@@ -121,24 +124,42 @@ function toggleModal() {
 // Faire appel à l'API pour les works
 
  // Création d'un nouvel objet FormData
-const formData = new FormData();
+ const form=document.querySelector("#addForm");
+  form.addEventListener("submit",event =>{
+    console.log("toto");
+    event.preventDefault();
+    const formData = new FormData(form);
+  
+    const images=document.querySelector("#image");
+    const file=images.files[0]
+    
+  
+  
+  // Ajout des données au formulaire
+  formData.append("image", file);
+  //formData.append("title", "title");
+  //formData.append('categorie', "category");
+  const token = sessionStorage.getItem("token");
+  // Configuration de la requête
+  
+  const options = {
+    method: "POST",
+    headers:{
+      "Authorization": `Bearer ${token}`,
+    },
+    body: formData
+  };
+  
+  
+  
+  // Envoi de la requête
+  fetch("http://localhost:5678/api/works",options)
+  .then(response => response.json())
+  .then(data => {
+    console.log('Réponse de l\'API:', data);
+    // Faites quelque chose avec la réponse de l'API ici
+  })
+  .catch(error => console.error('Erreur lors de l\'appel API:', error)); 
+  })
 
-// Ajout des données au formulaire
-formData.append("image", "image");
-formData.append("title", "title");
-formData.append('categorie', "category");
-
-// Configuration de la requête
-const options = {
-  method: "POST",
-  body: formData
-};
-
-// Envoi de la requête
-fetch("http://localhost:5678/api/works")
-.then(response => response.json())
-.then(data => {
-  console.log('Réponse de l\'API:', data);
-  // Faites quelque chose avec la réponse de l'API ici
-})
-.catch(error => console.error('Erreur lors de l\'appel API:', error));
+  

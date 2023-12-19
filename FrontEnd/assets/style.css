@@ -165,6 +165,8 @@ h1 > span {
 a{
   color: black;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
 }
 
 h2 {
@@ -356,8 +358,6 @@ input[type="submit"] {
 }
 
 .motDePasse  {
-  width: 139px;
-  height: 16px;
   font-family: Work Sans;
   font-weight: 500;
   font-size: 14px;
