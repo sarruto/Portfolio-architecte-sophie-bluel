@@ -66,6 +66,7 @@ html {
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: baseline;
+  padding-left: 20px;
 }
 
 .modal {
@@ -406,11 +407,6 @@ html {
    margin: 30px 105px 50px 105px;
   display: flex;
 }
-
-
-
-
-
 
 
 

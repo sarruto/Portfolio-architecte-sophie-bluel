@@ -221,6 +221,9 @@ li:hover {
   
 
 }
+.fa-regular{
+  padding-right: 10px;
+}
 
 .blackBloc {
   position: absolute;
