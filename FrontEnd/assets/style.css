@@ -136,6 +136,7 @@ body {
   margin: auto;
   font-family: "Work Sans";
   font-size: 14px;
+  padding: 0px -21px 0px 40px;
 }
 header {
   display: flex;
@@ -145,6 +146,7 @@ header {
 section {
   margin: 50px 0;
 }
+
 
 h1 {
   display: flex;
@@ -290,11 +292,13 @@ button{
   color: #FFFFFF;
   
   }
+
+
   .titreProjets{
     display: flex;
     justify-content: center;
     align-items: baseline;
-
+    padding-bottom: 40px;
   }
   .gallery {
     width: 100%;
