@@ -49,7 +49,7 @@ html {
   margin-bottom: 25px;
 }
 
-#openModalBtn {
+.openModalBtn {
   width: 58px;
   height: 16px;
   top: 601px;

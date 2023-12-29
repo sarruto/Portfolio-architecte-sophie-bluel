@@ -137,7 +137,7 @@ function closeModal() {
 }
 
 // Événement pour ouvrir la modale lors du clic sur le bouton
-const openModalBtn = document.getElementById("openModalBtn");
+const openModalBtn = document.querySelector(".openModalBtn");
 openModalBtn.addEventListener("click", openModal);
 
 // Événement pour fermer la modale lors du clic sur la croix
