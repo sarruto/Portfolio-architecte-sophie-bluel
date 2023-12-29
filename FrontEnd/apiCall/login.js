@@ -43,3 +43,12 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
       });
   });
   
+        // Code pour déconnecter l'utilisateur ici, par exemple 
+      function logout() {
+      const log-in = document.querySelector("");
+        // Supprimer les informations d'identification de l'utilisateur
+      sessionStorage.removeItem("token");
+        // Rediriger l'utilisateur vers la page de connexion
+      window.location.href ="login.html";
+      }
+    
