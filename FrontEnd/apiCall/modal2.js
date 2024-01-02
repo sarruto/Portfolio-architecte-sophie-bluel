@@ -70,7 +70,7 @@ function toggleModal() {
   console.log(categories)
   categories.unshift({
     id:0,
-    name: "Tous"
+    name: ""
   })
   categories.forEach(category=> {
     let option = document.createElement("option");

@@ -5,7 +5,7 @@ function displayModalWorks(works) {
   const gallery = document.querySelector(".gallery-modal");
   gallery.innerHTML = ""; // Effacer le contenu précédent de la galerie
 
-  works.forEach(work => {
+  works.forEach((work) => {
     const image = document.createElement("img");
     image.src = work.imageUrl;
     image.alt = work.title;
@@ -38,44 +38,43 @@ function getIconTrash(workId) {
 
   //Ajout de l'événement de suppression du work
   back.addEventListener("click", () => {
-  deleteWork(workId);
-  console.log("delete")
+    deleteWork(workId);
+    console.log("delete");
   });
 
   return back;
 }
 function getIconExpand() {
-  let img = document.createElement('img');
+  let img = document.createElement("img");
   img.src = "./assets/icons/expand.png";
-  let back = document.createElement('div');
-  back.classList.add('backiconsExpand');
-  img.classList.add('expandicons');
+  let back = document.createElement("div");
+  back.classList.add("backiconsExpand");
+  img.classList.add("expandicons");
   back.appendChild(img);
 
   return back;
 }
 
-
 // Fonction pour supprimer un work
 
 async function deleteWork(workId) {
-  console.log (workId);
+  console.log(workId);
   const token = sessionStorage.getItem("token");
 
   try {
     const response = await fetch(`http://localhost:5678/api/works/${workId}`, {
       method: "DELETE",
       headers: {
-        "Authorization": `Bearer ${token}`,
+        Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
-      }
+      },
     });
 
     if (response.ok) {
       // Suppression réussie, mettre à jour la galerie
-     // const updatedWorksResponse = await fetch("http://localhost:5678/api/works");
-      //const updatedWorks = await updatedWorksResponse.json();
-      //displayWorks(updatedWorks);
+      //const updatedWorksResponse = await fetch("http://localhost:5678/api/works");
+      const updatedWorks = await updatedWorksResponse.json();
+      displayWorks(updatedWorks);
       return true;
     } else {
       console.error("Erreur lors de la suppression du work.");
@@ -86,35 +85,39 @@ async function deleteWork(workId) {
   }
 }
 
-
-
-
 // Fonction pour ouvrir la modale et afficher la galerie des works
 function openModal() {
   const modal = document.getElementById("modal");
   modal.style.display = "block";
   displayModalWorks(works);
 
-
   // Fonction pour ouvrir la modale et ajouter un work
-//function openModalAjout() {
+  //function openModalAjout() {
   //const modal = document.getElementById("modalAjout");
   //modal.style.display = "block";
   //displayModalWorks(works);
+
   
+  // Fonction pour ajouter un work sans recharger la page
+  
+  
+  
+
+
+
+
 
   // Récupérer tous les éléments avec la classe "backicons" et ajouter l'événement de suppression
   const backIcons = document.querySelectorAll(".backicons");
-  backIcons.forEach(icon => {
+  backIcons.forEach((icon) => {
     const workId = icon.parentElement.dataset.id; // Récupérer l'id du work
     icon.addEventListener("click", (event) => {
-      if(deleteWork(workId)) {
+      if (deleteWork(workId)) {
         event.target.closest("figure").remove();
-        let index= works.findIndex(work => work.id === workId);
+        let index = works.findIndex((work) => work.id === workId);
         works.splice(index, 1);
         displayWorks(works);
       }
-  
     });
   });
 }
@@ -123,12 +126,10 @@ function openModal() {
 const addPhotoBtn = document.getElementById("addPhotoBtn");
 addPhotoBtn.addEventListener("click", toggleModal);
 
-function toggleModal(){
+function toggleModal() {
   document.querySelector(".modaldelete").classList.toggle("hidden");
   document.querySelector(".modalAjout").classList.toggle("hidden");
 }
-
-
 
 // Fonction pour fermer la modale
 function closeModal() {
