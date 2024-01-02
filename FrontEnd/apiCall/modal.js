@@ -36,11 +36,11 @@ function getIconTrash(workId) {
   img.classList.add("trashicons");
   back.appendChild(img);
 
-  // Ajout de l'événement de suppression du work
-  //back.addEventListener("click", () => {
-   // deleteWork(workId);
-    //console.log("delete")
-  //});
+  //Ajout de l'événement de suppression du work
+  back.addEventListener("click", () => {
+  deleteWork(workId);
+  console.log("delete")
+  });
 
   return back;
 }

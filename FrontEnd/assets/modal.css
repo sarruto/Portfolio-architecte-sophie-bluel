@@ -190,7 +190,7 @@ html {
 .border {
   border-bottom: 1px solid #b3b3b3;
   width: 420px;
-  margin: 3em 0em 3em 0em;
+  margin: 25px 0px 25px 0px;
 }
 
 .edit-button {
@@ -389,12 +389,29 @@ html {
   margin: 1em 0 1em 0;
 }
 
+.titleError{
+  color: black;
+  font-family: Work Sans;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 30px;
+}
+
+.categoryError{
+  color: black;
+  font-family: Work Sans;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+ 
+}
+
 .preview img{
   width: 129px;
   height: 193px;
-
-
-  
 
 }
 

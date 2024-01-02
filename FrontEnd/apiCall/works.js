@@ -81,9 +81,13 @@ if (token){
     window.location.reload()
 
   } )
+
+
   const openModalBtn = document.querySelector(".openModalBtn");
   openModalBtn.classList.remove("hidden");
 }
+
+
 else{
   displayBtn(categories, works);
 }
