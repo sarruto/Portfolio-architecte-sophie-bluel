@@ -59,9 +59,9 @@ function displayBtn(categories, works) {
 
 displayWorks(works);
 const token = sessionStorage.getItem("token");
-    // Pour gérer l'affichage en fonction de la connexion
+// Pour gérer l'affichage en fonction de la connexion
 if (token) {
-    // Pour récupérer mon lien
+  // Pour récupérer mon lien
   let link = document.querySelector("a[href='login.html']");
   link.textContent = "logout";
   link.addEventListener("click", (event) => {
@@ -79,11 +79,9 @@ if (token) {
   displayBtn(categories, works);
 }
 
-
-
-//const buttonModifier = document.querySelector(".buttonModifier");
-//if (buttonModifier) {
-  //buttonModifier.classList.remove("hidden");
-//} else {
-  //displayBtn(categories, works);
-//}
+const buttonModifier = document.querySelector(".buttonModifier");
+if (token) {
+  buttonModifier.classList.remove("hidden");
+} else {
+  displayBtn(categories, works);
+}
