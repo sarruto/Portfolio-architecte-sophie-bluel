@@ -100,6 +100,26 @@ function openModal() {
   
   // Fonction pour ajouter un work sans recharger la page
   
+  function handleSubmit(event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+    
+    // Récupérer les données du formulaire
+    const formData = new FormData(event.target);
+    
+    // Envoyer les données via une requête AJAX
+    fetch(event.target.action, {
+      method: event.target.method,
+      body: formData
+    })
+    .then(response => {
+      // Traiter la réponse
+      console.log(response);
+    })
+    .catch(error => {
+      // Gérer les erreurs
+      console.error(error);
+    });
+  }
   
   
 
