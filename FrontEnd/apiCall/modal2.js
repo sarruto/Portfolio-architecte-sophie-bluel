@@ -1,4 +1,7 @@
+
 import { categories } from "./works.js";
+import { works, displayWorks } from "./works.js";
+
 // Événement pour retourner à la modale delate photo lors du clic sur le bouton
 const arrowLeft = document.querySelector(".arrowLeft");
 arrowLeft.addEventListener("click", toggleModal);

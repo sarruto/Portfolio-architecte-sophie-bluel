@@ -99,34 +99,31 @@ function openModal() {
 
   
   // Fonction pour ajouter un work sans recharger la page
+  async function uploadWork(){
+    const updatedWorks = await updatedWorksResponse.json();
+    displayWorks(updatedWorks);
   
-  function handleSubmit(event) {
-    event.preventDefault(); // Empêche le rechargement de la page
+  // Envoyer les données via une requête AJAX
+  fetch(("http://localhost:5678/api/works"), {
+    method: "POST",
     
-    // Récupérer les données du formulaire
-    const formData = new FormData(event.target);
-    
-    // Envoyer les données via une requête AJAX
-    fetch(event.target.action, {
-      method: event.target.method,
-      body: formData
-    })
-    .then(response => {
-      // Traiter la réponse
-      console.log(response);
-    })
-    .catch(error => {
-      // Gérer les erreurs
-      console.error(error);
-    });
-  }
+  })
+  .then(response => {
+  // Traiter la réponse
+    console.log(response);
+  })
+  .catch(error => {
+    alert("Une erreur lors de l'ajout d'un work");
+    console.error(error);
+  });
+}}
   
   
 
 
 
 
-
+///////////
   // Récupérer tous les éléments avec la classe "backicons" et ajouter l'événement de suppression
   const backIcons = document.querySelectorAll(".backicons");
   backIcons.forEach((icon) => {
@@ -140,7 +137,7 @@ function openModal() {
       }
     });
   });
-}
+
 
 // Événement pour ouvrir la modale ajout photo lors du clic sur le bouton
 const addPhotoBtn = document.getElementById("addPhotoBtn");
