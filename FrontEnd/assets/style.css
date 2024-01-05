@@ -282,25 +282,26 @@ button{
 
   }
 
-  .buttonBox {
+.buttonBox {
     display: flex;
     justify-content: center;
     
   }
-  .active{
+.active{
   background:#1D6154; 
   color: #FFFFFF;
   }
 
  
 
-  .titreProjets{
+.titreProjets{
     display: flex;
     justify-content: center;
     align-items: baseline;
     padding-bottom: 40px;
   }
-  .gallery {
+  
+.gallery {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -310,7 +311,7 @@ button{
     padding-right: 85px;
   }
   
-  .gallery img {
+.gallery img {
     width: 100%;
   }
 

@@ -66,10 +66,10 @@ if (token) {
   link.textContent = "logout";
   link.addEventListener("click", (event) => {
     event.preventDefault();
-    // Supprimer les informations d'identification de l'utilisateur
+// Supprimer les informations d'identification de l'utilisateur
     sessionStorage.removeItem("token");
 
-    // Rediriger l'utilisateur vers la page de connexion
+// Rediriger l'utilisateur vers la page de connexion
     window.location.reload();
   });
 

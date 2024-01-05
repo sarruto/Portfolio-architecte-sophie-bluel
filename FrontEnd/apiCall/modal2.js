@@ -100,10 +100,6 @@ function checkEntries() {
   }
 }
 
-// Ajoute un événement de clic au bouton "Retour"
-//returnButton.addEventListener("click", resetFields);
-// Ajoute un événement de clic à l'icône de fermeture
-//closeButton.addEventListener("click", resetFields);
 function resetFields() {
   imageInput.value = "";
   imagePreview.src = "";
@@ -119,7 +115,6 @@ function resetFields() {
 // Création d'un nouvel objet FormData
 const form = document.querySelector("#addForm");
 form.addEventListener("submit", (event) => {
-
   event.preventDefault();
   const formData = new FormData(form);
 
@@ -128,8 +123,7 @@ form.addEventListener("submit", (event) => {
 
   // Ajout des données au formulaire
   formData.append("image", file);
-  //formData.append("title", "title");
-  //formData.append('categorie', "category");
+
   const token = sessionStorage.getItem("token");
   // Configuration de la requête
 
@@ -151,9 +145,9 @@ form.addEventListener("submit", (event) => {
       displayWorks(works);
       displayModalWorks(works);
       form.reset();
-      imageOk=false;
-      categorieOk=false;
-      titleOk=false;
+      imageOk = false;
+      categorieOk = false;
+      titleOk = false;
       checkEntries;
       document.querySelector(".preview").classList.toggle("hidden");
       document.querySelector(".blueBorder").classList.toggle("hidden");

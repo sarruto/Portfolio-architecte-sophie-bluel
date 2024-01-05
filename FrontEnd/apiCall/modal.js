@@ -31,7 +31,7 @@ function getIconTrash(workId) {
   //Ajout de l'événement de suppression du work
   back.addEventListener("click", (event) => {
     if (deleteWork(workId)) {
-      console.log("toto")
+      console.log("toto");
       event.target.closest("figure").remove();
       let index = works.findIndex((work) => work.id === workId);
       works.splice(index, 1);
@@ -62,10 +62,6 @@ async function deleteWork(workId) {
       },
     });
     if (response.ok) {
-      // Suppression réussie, mettre à jour la galerie
-      //const updatedWorksResponse = await fetch("http://localhost:5678/api/works");
-      //const updatedWorks = await updatedWorksResponse.json();
-      //displayWorks(updatedWorks);
       return true;
     } else {
       console.error("Erreur lors de la suppression du work.");
@@ -80,36 +76,7 @@ function openModal() {
   const modal = document.getElementById("modal");
   modal.style.display = "block";
   displayModalWorks(works);
-  // Fonction pour ouvrir la modale et ajouter un work
-  //function openModalAjout() {
-  //const modal = document.getElementById("modalAjout");
-  //modal.style.display = "block";
-  //displayModalWorks(works);
-
-
-  
 }
-
-
-
-
-
-
-  
-  // Récupérer tous les éléments avec la classe "backicons" et ajouter l'événement de suppression
-  //const backIcons = document.querySelectorAll(".backicons");
-  //backIcons.forEach((icon) => {
-    //const workId = icon.parentElement.dataset.id; // Récupérer l'id du work
-    //icon.addEventListener("click", (event) => {
-     // if (deleteWork(workId)) {
-       // console.log("toto")
-        //event.target.closest("figure").remove();
-        //let index = works.findIndex((work) => work.id === workId);
-        //works.splice(index, 1);
-        //displayWorks(works);
-      //}
-    //});
-  //});
 
 // Événement pour ouvrir la modale ajout photo lors du clic sur le bouton
 const addPhotoBtn = document.getElementById("addPhotoBtn");
