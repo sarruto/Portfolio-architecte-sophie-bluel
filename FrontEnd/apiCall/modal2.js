@@ -1,5 +1,6 @@
 import { categories } from "./works.js";
 import { works, displayWorks } from "./works.js";
+import { displayModalWorks } from "./modal.js";
 
 // Événement pour retourner à la modale delate photo lors du clic sur le bouton
 const arrowLeft = document.querySelector(".arrowLeft");
@@ -29,7 +30,7 @@ imageInput.addEventListener("change", function () {
 
   if (file.size > maxsize) {
     console.log("image supérieur à 4mo");
-    document.querySelector(".imageError").classList.toggle("hidden");
+    document.querySelector(".imageError").classList.remove("hidden");
     imageOk = false;
     checkEntries();
     return;
@@ -43,7 +44,7 @@ imageInput.addEventListener("change", function () {
     document.querySelector(".blueBorder").classList.toggle("hidden");
   };
   imageOk = true;
-  document.querySelector(".imageError").classList.toggle("hidden");
+  document.querySelector(".imageError").classList.add("hidden");
   checkEntries();
 });
 
@@ -100,9 +101,9 @@ function checkEntries() {
 }
 
 // Ajoute un événement de clic au bouton "Retour"
-returnButton.addEventListener("click", resetFields);
+//returnButton.addEventListener("click", resetFields);
 // Ajoute un événement de clic à l'icône de fermeture
-closeButton.addEventListener("click", resetFields);
+//closeButton.addEventListener("click", resetFields);
 function resetFields() {
   imageInput.value = "";
   imagePreview.src = "";
@@ -118,7 +119,7 @@ function resetFields() {
 // Création d'un nouvel objet FormData
 const form = document.querySelector("#addForm");
 form.addEventListener("submit", (event) => {
-  console.log("toto");
+
   event.preventDefault();
   const formData = new FormData(form);
 
@@ -143,9 +144,19 @@ form.addEventListener("submit", (event) => {
   // Envoi de la requête
   fetch("http://localhost:5678/api/works", options)
     .then((response) => response.json())
-    .then((data) => {
-      console.log("Réponse de l'API:", data);
+    .then((work) => {
+      console.log("Réponse de l'API:", work);
       // Faites quelque chose avec la réponse de l'API ici
+      works.push(work);
+      displayWorks(works);
+      displayModalWorks(works);
+      form.reset();
+      imageOk=false;
+      categorieOk=false;
+      titleOk=false;
+      checkEntries;
+      document.querySelector(".preview").classList.toggle("hidden");
+      document.querySelector(".blueBorder").classList.toggle("hidden");
     })
     .catch((error) => console.error("Erreur lors de l'appel API:", error));
 });

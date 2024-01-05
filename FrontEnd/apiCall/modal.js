@@ -1,6 +1,6 @@
 import { works, displayWorks } from "./works.js";
-// Fonction pour afficher les works dans la galerie de la modale
-function displayModalWorks(works) {
+// Fonction pour afficher les works dans la galerie de la modal
+export function displayModalWorks(works) {
   const gallery = document.querySelector(".gallery-modal");
   gallery.innerHTML = ""; // Effacer le contenu précédent de la galerie
   works.forEach((work) => {
@@ -29,9 +29,14 @@ function getIconTrash(workId) {
   img.classList.add("trashicons");
   back.appendChild(img);
   //Ajout de l'événement de suppression du work
-  back.addEventListener("click", () => {
-    deleteWork(workId);
-    console.log("delete");
+  back.addEventListener("click", (event) => {
+    if (deleteWork(workId)) {
+      console.log("toto")
+      event.target.closest("figure").remove();
+      let index = works.findIndex((work) => work.id === workId);
+      works.splice(index, 1);
+      displayWorks(works);
+    }
   });
   return back;
 }
@@ -59,8 +64,8 @@ async function deleteWork(workId) {
     if (response.ok) {
       // Suppression réussie, mettre à jour la galerie
       //const updatedWorksResponse = await fetch("http://localhost:5678/api/works");
-      const updatedWorks = await updatedWorksResponse.json();
-      displayWorks(updatedWorks);
+      //const updatedWorks = await updatedWorksResponse.json();
+      //displayWorks(updatedWorks);
       return true;
     } else {
       console.error("Erreur lors de la suppression du work.");
@@ -82,52 +87,29 @@ function openModal() {
   //displayModalWorks(works);
 
 
-  // Fonction pour ajouter un work sans recharger la page
-  async function uploadWork(){
-    const updatedWorks = await updatedWorksResponse.json();
-    displayWorks(updatedWorks);
-
-  //function handleSubmit(event) {
-    //event.preventDefault(); // Empêche le rechargement de la page
-   // Envoyer les données via une requête AJAX
-  fetch(("http://localhost:5678/api/works"), {
-    method: "POST",
-
-    // Récupérer les données du formulaire
-    //const formData = new FormData(event.target);
-
-    
   
-  })
-  .then(response => {
-  // Traiter la réponse
-    console.log(response);
-  })
-  .catch(error => {
-    alert("Une erreur lors de l'ajout d'un work");
-    console.error(error);
-  });
-}}
+}
 
 
 
 
 
 
-                    ///////////
+  
   // Récupérer tous les éléments avec la classe "backicons" et ajouter l'événement de suppression
-  const backIcons = document.querySelectorAll(".backicons");
-  backIcons.forEach((icon) => {
-    const workId = icon.parentElement.dataset.id; // Récupérer l'id du work
-    icon.addEventListener("click", (event) => {
-      if (deleteWork(workId)) {
-        event.target.closest("figure").remove();
-        let index = works.findIndex((work) => work.id === workId);
-        works.splice(index, 1);
-        displayWorks(works);
-      }
-    });
-  });
+  //const backIcons = document.querySelectorAll(".backicons");
+  //backIcons.forEach((icon) => {
+    //const workId = icon.parentElement.dataset.id; // Récupérer l'id du work
+    //icon.addEventListener("click", (event) => {
+     // if (deleteWork(workId)) {
+       // console.log("toto")
+        //event.target.closest("figure").remove();
+        //let index = works.findIndex((work) => work.id === workId);
+        //works.splice(index, 1);
+        //displayWorks(works);
+      //}
+    //});
+  //});
 
 // Événement pour ouvrir la modale ajout photo lors du clic sur le bouton
 const addPhotoBtn = document.getElementById("addPhotoBtn");
