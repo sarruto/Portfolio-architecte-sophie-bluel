@@ -31,7 +31,6 @@ function getIconTrash(workId) {
   //Ajout de l'événement de suppression du work
   back.addEventListener("click", (event) => {
     if (deleteWork(workId)) {
-      console.log("toto");
       event.target.closest("figure").remove();
       let index = works.findIndex((work) => work.id === workId);
       works.splice(index, 1);

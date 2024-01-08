@@ -209,8 +209,8 @@ li:hover {
   padding-right: 85px;
 }
 #introduction h2 {
-  margin-bottom: 1em;
   display: flex;
+  margin-bottom: 19px;
 }
 
 #introduction p {
@@ -219,9 +219,6 @@ li:hover {
 }
 #portfolio h2 {
   text-align: center;
-  margin-bottom: 1em;
-  
-
 }
 .fa-regular{
   padding-right: 10px;
@@ -268,7 +265,6 @@ button{
   color: #1d6154;
   height: 37px;
   font-size: 16px;
-  margin-bottom: 51px ;
   margin-right: 10px;
   text-align: center;
   box-sizing: border-box;
@@ -280,11 +276,13 @@ button{
   font-style: normal;
   font-weight: 700;
 
+
   }
 
 .buttonBox {
     display: flex;
     justify-content: center;
+    margin: 51px 0px 51px 0px;
     
   }
 .active{
@@ -298,7 +296,6 @@ button{
     display: flex;
     justify-content: center;
     align-items: baseline;
-    padding-bottom: 40px;
   }
   
 .gallery {

@@ -189,7 +189,13 @@ html {
 .border {
   border-bottom: 1px solid #b3b3b3;
   width: 420px;
-  margin: 25px 0px 25px 0px;
+  margin: 67px 0px 38px 0px;
+}
+
+.borderAjout{
+  border-bottom: 1px solid #b3b3b3;
+  width: 420px;
+  margin: 47px 0px 32px 0px;
 }
 
 .edit-button {
@@ -221,11 +227,11 @@ html {
   margin-top: 10px;
   color: #d65353;
   cursor: pointer;
+  padding: 32px 0px 48px 0px;
 }
 
 .modalAjout {
   width: 630px;
-  height: 670px;
   top: 660px;
   left: 405px;
   border-radius: 10px;
