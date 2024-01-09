@@ -80,8 +80,4 @@ if (token) {
 }
 
 const buttonModifier = document.querySelector(".buttonModifier");
-if (token) {
-  buttonModifier.classList.remove("hidden");
-} else {
-  displayBtn(categories, works);
-}
+buttonModifier.classList.remove("hidden");

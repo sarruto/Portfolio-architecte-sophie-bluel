@@ -83,11 +83,13 @@ html {
 .modal-content {
   position: absolute;
   width: 630px;
-  left: 405px;
-  top: 660px;
   border-radius: 10px;
   background: #ffffff;
+  margin: 50px 405px;
 }
+
+  
+  
 
 .closeModal {
   height: 12.01px;
@@ -232,10 +234,11 @@ html {
 
 .modalAjout {
   width: 630px;
-  top: 660px;
-  left: 405px;
+  height: 670px;
   border-radius: 10px;
+
 }
+
 
 .arrowLeft {
   width: 21px;

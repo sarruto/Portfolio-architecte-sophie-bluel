@@ -95,3 +95,12 @@ openModalBtn.addEventListener("click", openModal);
 // Événement pour fermer la modale lors du clic sur la croix
 const closeModalBtn = document.querySelector(".closeModal");
 closeModalBtn.addEventListener("click", closeModal);
+
+// Événement pour fermer la modale lors du clic en dehors de la modale
+const modal = document.getElementById("modal");
+modal.addEventListener("click", closeModal);
+// Événement pour empêcher la fermeture de la modale lors du clic dans la modale
+const modalContent = document.querySelector(".modal-content");
+modalContent.addEventListener("click", (event) => {
+  event.stopPropagation();
+});
