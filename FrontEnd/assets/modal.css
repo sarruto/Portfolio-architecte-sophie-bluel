@@ -80,13 +80,14 @@ html {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+
 .modal-content {
-  position: absolute;
   width: 630px;
   border-radius: 10px;
   background: #ffffff;
-  margin: 50px 405px;
+  margin: auto;
 }
+
 
   
   
@@ -163,7 +164,6 @@ html {
 
 .expand {
   color: #ffffff;
-
   height: 11px;
   width: 11px;
 }
@@ -241,13 +241,20 @@ html {
 
 
 .arrowLeft {
-  width: 21px;
-  height: 18px;
-  color: black;
-  position: absolute;
-  top: 32px;
-  left: 30px;
+width: 21px;
+height: 21px;
+color: black;
+left: 6px;
+  top: 6px;
+  
+  float: right;
+  padding: 36px 36px 0px 0px;
+
 }
+
+
+
+
 .blueBorder {
   width: 420px;
   height: 169px;

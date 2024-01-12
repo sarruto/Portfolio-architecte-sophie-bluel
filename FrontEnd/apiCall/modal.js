@@ -73,9 +73,10 @@ async function deleteWork(workId) {
 // Fonction pour ouvrir la modale et afficher la galerie des works
 function openModal() {
   const modal = document.getElementById("modal");
-  modal.style.display = "block";
+  modal.style.display = "flex";
   displayModalWorks(works);
 }
+
 
 // Événement pour ouvrir la modale ajout photo lors du clic sur le bouton
 const addPhotoBtn = document.getElementById("addPhotoBtn");

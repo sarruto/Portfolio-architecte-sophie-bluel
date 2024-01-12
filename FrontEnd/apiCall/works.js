@@ -73,11 +73,10 @@ if (token) {
     window.location.reload();
   });
 
-  const openModalBtn = document.querySelector(".openModalBtn");
+const openModalBtn = document.querySelector(".openModalBtn");
   openModalBtn.classList.remove("hidden");
+  const buttonModifier = document.querySelector(".buttonModifier");
+  buttonModifier.classList.remove("hidden");
 } else {
   displayBtn(categories, works);
 }
-
-const buttonModifier = document.querySelector(".buttonModifier");
-buttonModifier.classList.remove("hidden");
