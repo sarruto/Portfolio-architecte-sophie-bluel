@@ -1,5 +1,6 @@
+
 document.getElementById("login-form").addEventListener("submit", (e) => {
-  e.preventDefault();
+  e.preventDefault();// Empêche le rechargement de la page par default
 
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;

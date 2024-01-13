@@ -7,10 +7,10 @@ export const works = await worksResponse.json();
 
 export function displayWorks(works) {
   const gallery = document.querySelector(".gallery");
-  gallery.innerHTML = ""; // Effacer le contenu précédent de la galerie
+  gallery.innerHTML = ""; 
 
   works.forEach((work) => {
-    const image = document.createElement("img");
+    const image = document.createElement("img");// créatiom d'un nouveau élément img
     image.src = work.imageUrl;
     image.alt = work.title;
 
@@ -19,7 +19,7 @@ export function displayWorks(works) {
 
     let figure = document.createElement("figure");
 
-    figure.appendChild(image);
+    figure.appendChild(image); //Ajout de l'élément img à la figure
     figure.appendChild(figCaption);
     gallery.appendChild(figure);
   });
@@ -57,9 +57,10 @@ function displayBtn(categories, works) {
   });
 }
 
+// Pour gérer l'affichage en fonction de la connexion
 displayWorks(works);
 const token = sessionStorage.getItem("token");
-// Pour gérer l'affichage en fonction de la connexion
+
 if (token) {
   // Pour récupérer mon lien
   let link = document.querySelector("a[href='login.html']");
@@ -73,7 +74,7 @@ if (token) {
     window.location.reload();
   });
 
-const openModalBtn = document.querySelector(".openModalBtn");
+  const openModalBtn = document.querySelector(".openModalBtn");
   openModalBtn.classList.remove("hidden");
   const buttonModifier = document.querySelector(".buttonModifier");
   buttonModifier.classList.remove("hidden");
