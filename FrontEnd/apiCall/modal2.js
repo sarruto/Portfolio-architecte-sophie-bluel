@@ -67,7 +67,6 @@ titleInput.addEventListener("input", function () {
   checkEntries();
 });
 let select = document.getElementById("category");
-console.log(categories);
 categories.unshift({
   id: 0,
   name: "",
