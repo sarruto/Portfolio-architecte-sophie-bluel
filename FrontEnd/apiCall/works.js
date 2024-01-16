@@ -78,6 +78,8 @@ if (token) {
   openModalBtn.classList.remove("hidden");
   const buttonModifier = document.querySelector(".buttonModifier");
   buttonModifier.classList.remove("hidden");
+  const blackBloc = document.querySelector(".blackBloc");
+  blackBloc.classList.remove("hidden");
 } else {
   displayBtn(categories, works);
 }

@@ -2,7 +2,7 @@ import { works, displayWorks } from "./works.js";
 // Fonction pour afficher les works dans la galerie de la modal
 export function displayModalWorks(works) {
   const gallery = document.querySelector(".gallery-modal");
-  gallery.innerHTML = ""; // Effacer le contenu précédent de la galerie
+  gallery.innerHTML = "";
   works.forEach((work) => {
     const image = document.createElement("img");
     image.src = work.imageUrl;
@@ -76,7 +76,6 @@ function openModal() {
   modal.style.display = "flex";
   displayModalWorks(works);
 }
-
 
 // Événement pour ouvrir la modale ajout photo lors du clic sur le bouton
 const addPhotoBtn = document.getElementById("addPhotoBtn");

@@ -18,7 +18,7 @@ const addPhotoLabel = blueBorderDiv.querySelector("label[for='image']");
 const iconsPictureImg = blueBorderDiv.querySelector(".iconsPicture");
 const returnButton = document.querySelector(".arrowLeft");
 const closeButton = document.querySelector(".closeModal");
-blueBorderDiv.appendChild(imagePreview);
+blueBorderDiv.appendChild(imagePreview); 
 const titleInput = document.getElementById("title");
 
 let imageOk = false;
