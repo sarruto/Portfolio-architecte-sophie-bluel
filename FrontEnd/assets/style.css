@@ -141,7 +141,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  margin: 50px 0;
+  margin-bottom: 50px;
 }
 section {
   margin: 26px 0;
@@ -156,6 +156,7 @@ h1 {
   font-weight: 800;
   color: #b1663c;
   padding-top: 40px;
+  margin-top: 38px;
   
 }
 
@@ -183,6 +184,7 @@ nav ul {
   align-items: center;
   list-style-type: none;
   padding-top: 40px;
+  margin-top: 38px;
 }
 nav li {
   padding: 0 10px;
